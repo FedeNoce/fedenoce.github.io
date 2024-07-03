@@ -18,10 +18,10 @@ _If you wish to learn more about my research or explore potential collaborations
 Latest News
 ======
 
-- Our paper [ScanTalk: 3D talking Heads from Unregistered Scans](https://tbesnier.github.io/projects/scantalk/) has been accepted at ECCV 2024.
+- Our paper [ScanTalk: 3D Talking Heads from Unregistered Scans](https://tbesnier.github.io/projects/scantalk/) has been accepted at [ECCV 2024](https://eccv2024.ecva.net/).
 
-- Our demo [S2L+S2D: Identity-Preserving Speech-Driven 3D Talking Heads](https://github.com/FedeNoce/s2l-s2d) has received the Best Demo Award at IJCB 2023.
+- Our demo [S2L+S2D: Identity-Preserving Speech-Driven 3D Talking Heads](https://github.com/FedeNoce/s2l-s2d) has received the Best Demo Award at [IJCB 2023](https://ijcb2023.ieee-biometrics.org/).
 
-- Our paper [Learning Landmarks Motion from Speech for Speaker-Agnostic 3D Talking Heads Generation](https://github.com/FedeNoce/s2l-s2d) has been accepted at ICIAP 2023.
+- Our paper [Learning Landmarks Motion from Speech for Speaker-Agnostic 3D Talking Heads Generation](https://github.com/FedeNoce/s2l-s2d) has been accepted at [ICIAP 2023](https://sites.google.com/view/iciap-2023?pli=1).
 
 
