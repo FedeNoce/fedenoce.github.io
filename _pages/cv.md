@@ -69,6 +69,7 @@ Skills
   * C
 
 * Machine Learning Technologies
+  * Pytorch3D
   * PyTorch
   * Keras
   * Tensorflow
