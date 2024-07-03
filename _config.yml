@@ -335,6 +335,5 @@ compress_html:
   clippings: all
   ignore:
     envs: development
-
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+theme: "minimal-mistakes-jekyll"
+minimal_mistakes_skin: "dark"
