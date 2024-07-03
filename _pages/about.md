@@ -6,7 +6,6 @@ redirect_from:
   - /about/
   - /about.html
 ---
-Hi! 
 
 I am Federico Nocentini. I am a 2nd year PhD student at the [University of Florence](https://www.unifi.it/changelang-eng.html) at the [Media Integration and Communication Center (MICC)](https://www.micc.unifi.it/) under the supervion of [Prof. Stefano Berretti](https://www.micc.unifi.it/berretti/) and [Prof. Claudio Ferrari](https://clferrari.github.io/).
 
