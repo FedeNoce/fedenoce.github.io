@@ -15,7 +15,7 @@ Education
   * Università degli Studi di Firenze - Media Integration and Communication Center
   * Florence, Italy
   * November 2022 - Present
-  * Topics of research: Deep - Machine Learning ; 3D Vision; Speech-driven 3D Talking Heads Generation
+  * Topics of research: Deep Learning - 3D Computer Vision - 3D Talking Heads Generation
 
 * **M.Sc in Computer Science and Engineering**
   * Università degli Studi di Firenze
