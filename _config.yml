@@ -21,10 +21,10 @@ repository               : "FedeNoce/fedenoce.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile_new.jpeg"
+  avatar           : "profile_new.png"
   name             : "Federico Nocentini"
   pronouns         : # example: "she/her"  
-  bio              : "PhD Student - 3D Computer Vision, 3D Talking Heads"
+  bio              : "PhD Student - 3D Computer Vision - 3D Talking Heads"
   location         : "Florence"
   employer         : "MICC, University of Florence"
   uri              : # URL
