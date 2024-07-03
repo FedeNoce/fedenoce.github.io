@@ -13,7 +13,7 @@ My main research interest revolve around 3D Computer Vision and Deep Learning, w
 
 Previously, I obtained my MSc in Computer Science and Engineering  at the University of Florence under the supervision of [Prof. Stefano Berretti](https://www.micc.unifi.it/berretti/) and [Prof. Claudio Ferrari](https://clferrari.github.io/) with a thesis titled “Generating Emotional 3D Talking Heads from Audio Spectrograms.”
 
-If you wish to learn more about my research or explore potential collaborations, please feel free to reach out via email!
+_If you wish to learn more about my research or explore potential collaborations, please feel free to reach out via email!_
 
 Latest News
 ======
