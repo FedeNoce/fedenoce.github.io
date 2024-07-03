@@ -3,7 +3,7 @@ title: "ScanTalk: 3D Talking Heads from Unregistered Scans"
 collection: publications
 permalink: /publication/scantalk-3
 excerpt: 'In this work, we present ScanTalk, a novel framework capable of animating 3D faces in arbitrary topologies including scanned data.'
-date: 2009-10-01
+date: 2024-03-19
 venue: 'European Conference on Computer Vision (ECCV)'
 paperurl: 'https://arxiv.org/pdf/2403.10942'
 ---
