@@ -4,9 +4,9 @@ collection: publications
 permalink: /publication/s2l-s2d-1
 excerpt: 'A novel approach for generating 3D talking heads from raw audio inputs. This method grounds on the idea that speech related
 movements can be comprehensively and efficiently described by the motion of a few control points located on the movable parts of the
-face, i.e., landmarks. This paper was published at ICIAP 2023 and presented orally'
+face, i.e., landmarks.'
 date: 2023-07-26
-venue: 'International Conference on Image Analisys and Processing (ICIAP 2023)'
+venue: 'International Conference on Image Analisys and Processing (ICIAP 2023)(Oral)'
 paperurl: 'https://arxiv.org/pdf/2306.01415'
 
 ---
