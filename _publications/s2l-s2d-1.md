@@ -6,7 +6,7 @@ excerpt: 'A novel approach for generating 3D talking heads from raw audio inputs
 movements can be comprehensively and efficiently described by the motion of a few control points located on the movable parts of the
 face, i.e., landmarks.'
 date: 2023-07-26
-venue: 'International Conference on Image Analisys and Processing (ICIAP 2023)(Oral)'
+venue: 'International Conference on Image Analisys and Processing (ICIAP)(Oral)'
 paperurl: 'https://arxiv.org/pdf/2306.01415'
 
 ---
