@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: ""
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -39,7 +39,7 @@ Publications
   {% endfor %}
 </ul>
 
-Projects
+[Projects](https://github.com/FedeNoce)
 ======
 * **Citation intent classification**
   * A model built with Pytorch for citation intent classification in scientific papers using the Scicite dataset. To leverage the connection between the structure of scientific papers and the intent of citations, we studied a multitask framework with two structural scaffolds (auxiliary tasks) related to the structure of scientific documents.
