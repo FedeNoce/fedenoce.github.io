@@ -11,7 +11,7 @@ redirect_from:
 
 Education
 ======
-* **PhD in Smart computing**
+* **PhD in 3D Computer Vision and Artificial Intelligence**
   * Università degli Studi di Firenze - Media Integration and Communication Center
   * Florence, Italy
   * November 2022 - Present
