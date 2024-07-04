@@ -39,6 +39,19 @@ Publications
   {% endfor %}
 </ul>
 
+Skills
+======
+* Framework and Tools: PyTorch, Pytorch3D, Tensorflow, Open3D, Trimesh, Numpy, Pandas, Matpoltlib, OpenCV.
+
+* Programming Languages: Python, Java, C++, C, Javascript.
+
+* Miscellaneous: Git, bash.
+
+Languages
+======
+* **Italian**: Mother tongue.
+* **English**: Full professiona proficiency.
+
 [Projects](https://github.com/FedeNoce)
 ======
 * **Citation intent classification**
@@ -59,28 +72,5 @@ Publications
 * **K-means clustering with CUDA and OpenMP**
   * Sequential Python and parallel CUDA and OpenMP implementations of the k-means clustering algorithm. The execution times obtained for datasets of increasing dimension are compared to measure the speedup of the parallel versions.
 
-Skills
-======
-* Programming Languages
-  * Python
-  * Java
-  * C++
-  * Javascript
-  * C
-
-* Machine Learning Technologies
-  * Pytorch3D
-  * PyTorch
-  * Keras
-  * Tensorflow
-
-* Environments
-  * Linux (development)
-  * Web (development)
-
-Languages
-======
-* **Italian**: Mother tongue
-* **English**: C1 level
 
 
