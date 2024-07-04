@@ -41,16 +41,16 @@ Publications
 
 Skills
 ======
-* Framework and Tools: PyTorch, Pytorch3D, Tensorflow, Open3D, Trimesh, Numpy, Pandas, Matpoltlib, OpenCV.
+* Framework and Tools: PyTorch, Pytorch3D, Tensorflow, Open3D, Trimesh, Numpy, Pandas, Matpoltlib, OpenCV
 
-* Programming Languages: Python, Java, C++, C, Javascript.
+* Programming Languages: Python, Java, C++, C, Javascript
 
-* Miscellaneous: Git, bash.
+* Miscellaneous: Git, bash
 
 Languages
 ======
-* **Italian**: Mother tongue.
-* **English**: Full professiona proficiency.
+* **Italian**: Mother tongue
+* **English**: Full professional proficiency
 
 [Projects](https://github.com/FedeNoce)
 ======

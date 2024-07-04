@@ -1,5 +1,5 @@
 ---
-title: "Learning Landmarks Motion from Speech for Speaker-Agnostic 3D Talking Heads Generation."
+title: "Learning Landmarks Motion from Speech for Speaker-Agnostic 3D Talking Heads Generation"
 collection: publications
 permalink: /publication/s2l-s2d-1
 excerpt: 'A novel approach for generating 3D talking heads from raw audio inputs. This method grounds on the idea that speech related
