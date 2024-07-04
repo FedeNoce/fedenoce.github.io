@@ -41,7 +41,7 @@ Publications
 
 Skills
 ======
-* Framework and Tools: PyTorch, Pytorch3D, Tensorflow, Open3D, Trimesh, Numpy, Pandas, Matpoltlib, OpenCV
+* Framework and Tools: PyTorch, Pytorch3D, Tensorflow, Open3D, Trimesh, Numpy, Pandas, Matplotlib, OpenCV
 
 * Programming Languages: Python, Java, C++, C, Javascript
 
