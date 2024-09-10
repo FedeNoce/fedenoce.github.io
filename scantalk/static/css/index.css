@@ -156,18 +156,44 @@ body {
   border-radius: 5px;
 }
 
-.video-row {
-  display: flex;
-  justify-content: space-between; /* Adds space between the videos */
-  align-items: center;
-  flex-wrap: wrap; /* Allows wrapping if the screen is small */
-}
-
+/* General styles */
 .video-item {
-  width: 30%; /* Set a consistent width for each video */
+  width: 30%; /* Default width */
   height: auto;
   margin: 10px;
+  box-sizing: border-box;
 }
+
+.video-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* For smaller screens, adjust video size and layout */
+@media screen and (max-width: 1024px) {
+  .video-item {
+    width: 45%; /* Adjust width for tablets */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .video-item {
+    width: 100%; /* Full width for mobile */
+    margin-bottom: 20px;
+  }
+
+  .video-row {
+    justify-content: center;
+  }
+}
+
+/* Center the title */
+.centered-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 
 .centered-title {
   text-align: center;
