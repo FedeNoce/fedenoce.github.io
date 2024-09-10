@@ -156,51 +156,40 @@ body {
   border-radius: 5px;
 }
 
-/* General styles */
-.video-item {
-  width: 30%; /* Default width */
-  height: auto;
-  margin: 10px;
-  box-sizing: border-box;
-}
-
+/* Flexbox layout for videos */
 .video-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 20px; /* Space between videos */
+  justify-content: center; /* Center videos */
 }
 
-/* For smaller screens, adjust video size and layout */
-@media screen and (max-width: 1024px) {
-  .video-item {
-    width: 45%; /* Adjust width for tablets */
-  }
+.video-item {
+  flex: 1 1 calc(33.333% - 20px); /* Three videos per row by default */
+  max-width: calc(33.333% - 20px);
+  height: auto;
 }
 
-@media screen and (max-width: 768px) {
-  .video-item {
-    width: 100%; /* Full width for mobile */
-    margin-bottom: 20px;
-  }
-
-  .video-row {
-    justify-content: center;
-  }
-}
-
-/* Center the title */
+/* Center title */
 .centered-title {
   text-align: center;
   margin-bottom: 20px;
 }
 
-
-.centered-title {
-  text-align: center;
-  margin-bottom: 20px; /* Optional: Adds space between the title and the videos */
+/* Media query for tablets and smaller devices */
+@media screen and (max-width: 1024px) {
+  .video-item {
+    flex: 1 1 calc(45% - 20px); /* Two videos per row */
+    max-width: calc(45% - 20px);
+  }
 }
 
-.small-image {
-  width: 100px;
-  height: auto;
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .video-item {
+    flex: 1 1 100%; /* One video per row */
+    max-width: 100%;
+  }
 }
+
+
