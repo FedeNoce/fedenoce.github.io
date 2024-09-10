@@ -173,3 +173,8 @@ body {
   text-align: center;
   margin-bottom: 20px; /* Optional: Adds space between the title and the videos */
 }
+
+.small-image {
+  width: 200px;
+  height: auto;
+}
