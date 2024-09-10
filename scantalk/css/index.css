@@ -157,4 +157,39 @@ body {
   border-radius: 5px;
 }
 
+/* Flexbox layout for videos */
+.video-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between videos */
+  justify-content: center; /* Center videos */
+}
+
+.video-item {
+  flex: 1 1 calc(33.333% - 20px); /* Three videos per row by default */
+  max-width: calc(33.333% - 20px);
+  height: auto;
+}
+
+/* Center title */
+.centered-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Media query for tablets and smaller devices */
+@media screen and (max-width: 1024px) {
+  .video-item {
+    flex: 1 1 calc(45% - 20px); /* Two videos per row */
+    max-width: calc(45% - 20px);
+  }
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .video-item {
+    flex: 1 1 100%; /* One video per row */
+    max-width: 100%;
+  }
+}
 
