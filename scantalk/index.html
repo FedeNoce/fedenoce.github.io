@@ -239,7 +239,8 @@
              3D face based on a spoken sentence from an audio file. The Encoder integrates the 3D neutral face, per-vertex 
              surface features (crucial for DiffusionNet and precomputed by the operators OP), 
             and the audio file, yielding a fusion of per-vertex and audio features. 
-          These combined descriptors, alongside $P_i^n$, are then passed to the Decoder, which mirrors a reversed
+          These combined descriptors, alongside per-vertex 
+          surface features, are then passed to the Decoder, which mirrors a reversed
            DiffusionNet encoder structure. The Decoder predicts the deformation of the 3D neutral face, which is then 
            combined with the original 3D neutral face to generate the animated sequence.
 
