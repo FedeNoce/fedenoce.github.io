@@ -155,3 +155,16 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.video-row {
+  display: flex;
+  justify-content: space-between; /* Adds space between the videos */
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping if the screen is small */
+}
+
+.video-item {
+  width: 30%; /* Set a consistent width for each video */
+  height: auto;
+  margin: 10px;
+}
