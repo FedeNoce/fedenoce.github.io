@@ -9,8 +9,6 @@ redirect_from:
 
 {% include base_path %}
 
-[Download PDF version of my CV](./files/Federico_Nocentini_CV_.pdf)
-
 Education
 ======
 * **PhD in 3D Computer Vision and Artificial Intelligence**
@@ -75,4 +73,4 @@ Languages
   * Sequential Python and parallel CUDA and OpenMP implementations of the k-means clustering algorithm. The execution times obtained for datasets of increasing dimension are compared to measure the speedup of the parallel versions.
 
 
-
+[Download PDF version of my CV](/files/Federico_Nocentini_CV_.pdf)
