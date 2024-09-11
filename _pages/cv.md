@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+[Download PDF version of my CV](./files/Federico_Nocentini_CV_.pdf)
+
 Education
 ======
 * **PhD in 3D Computer Vision and Artificial Intelligence**
