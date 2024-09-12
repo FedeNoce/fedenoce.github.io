@@ -18,7 +18,7 @@ _If you wish to learn more about my research or explore potential collaborations
 Latest News
 ======
 
-- Our paper [ScanTalk: 3D Talking Heads from Unregistered Scans](https://fedenoce.github.io/scantalk/) has been accepted at [ECCV 2024](https://eccv2024.ecva.net/).
+- Our paper [ScanTalk: 3D Talking Heads from Unregistered Scans](https://github.com/miccunifi/ScanTalk/) has been accepted at [ECCV 2024](https://eccv2024.ecva.net/).
 
 - Our demo [S2L+S2D: Identity-Preserving Speech-Driven 3D Talking Heads](https://github.com/FedeNoce/s2l-s2d) has received the Best Demo Award at [IJCB 2023](https://ijcb2023.ieee-biometrics.org/).
 
