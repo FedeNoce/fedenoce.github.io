@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-I am Federico Nocentini. I am a 2nd year PhD student at the [University of Florence](https://www.unifi.it/changelang-eng.html) at the [Media Integration and Communication Center (MICC)](https://www.micc.unifi.it/) under the supervion of [Prof. Stefano Berretti](https://www.micc.unifi.it/berretti/) and [Prof. Claudio Ferrari](https://clferrari.github.io/).
+I am Federico Nocentini. I am a 2nd year PhD student at the [University of Florence](https://www.unifi.it/changelang-eng.html) at the [Media Integration and Communication Center (MICC)](https://www.micc.unifi.it/) under the supervision of [Prof. Stefano Berretti](https://www.micc.unifi.it/berretti/) and [Prof. Claudio Ferrari](https://clferrari.github.io/).
 
 My main research interest revolve around 3D Computer Vision and Deep Learning, with a particular focus on human analysis applications, 3D and 4D generative face models.
 
