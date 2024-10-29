@@ -3,7 +3,7 @@ title: "EmoVOCA: Speech-Driven Emotional 3D Talking Heads"
 collection: publications
 permalink: /publication/emovoca-2
 excerpt: 'We present EmoVOCA, a novel dataset that can be used to train a model to generate emotional 3D talking heads. The proposed method is capable of generating emotional 3D talking heads based on a speech track, an intensity label, an emotion label, and an actor to animate'
-date: 2025
+date: 2025-03-19
 venue: 'IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)'
 paperurl: 'https://arxiv.org/pdf/2403.12886'
 
