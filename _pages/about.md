@@ -18,6 +18,8 @@ _If you wish to learn more about my research or explore potential collaborations
 Latest News
 ======
 
+- Our paper [EmoVOCA: Speech-Driven Emotional 3D Talking Heads](https://arxiv.org/abs/2403.12886) has been accepted at [WACV 2025](https://wacv2025.thecvf.com/).
+
 - Our new paper [Beyond Fixed Topologies: Unregistered Training and Comprehensive Evaluation Metrics for 3D Talking Heads](https://arxiv.org/abs/2410.11041) is available on ArXiv.
 
 - I presented our Demo [EmoVOCA: Speech-Driven Emotional 3D Talking Heads](https://arxiv.org/abs/2403.12886) at [ECCV 2024](https://eccv2024.ecva.net/).
