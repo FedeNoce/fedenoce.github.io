@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="">
+  <meta name="keywords" content="3D Talking Heads, DiffusionNet, 3D Scans Animation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScanTalk</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!-- <h1 class="title is-1 publication-title">ECCV 2024</h1>-->
+          <img src="./static/images/wacv-logo.png" alt="WACV 2025" style="width: 400px; height: auto;">
+          <h1 class="title is-1 publication-title">EmoVOCA: Speech-Driven Emotional 3D Talking Heads</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://fedenoce.github.io/">Federico Nocentini</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a href="https://clferrari.github.io/">Claudio Ferrari</a><sup>2</sup>,</span>
+            <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=3GPTAGQAAAAJ&hl=en">Stefano Berretti</a><sup>1</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Media Integration and Communication Center (MICC), University of Florence, Italy,</span>
+            <span class="author-block"><sup>2</sup>Department of Architecture and Engineering University of Parma, Italy,</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2403.12886"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://eccv2024.ecva.net/media/PosterPDFs/ECCV%202024/1636.png?t=1727257422.3138037"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span>Poster</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/miccunifi/EmoVOCA/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Proposed Method. -->
+<section class="section">
+<div class="columns is-centered has-text-centered">
+  <div class="column is-four-fifths">
+    <div class="content has-text-justified">
+      <img src="./static/videos/idea.png" alt="emovoca_idea">
+      <p>
+        <br>
+        We introduce <strong>EmoVOCA</strong>, a novel approach for generating a synthetic 3D Emotional Talking Heads dataset which leverages speech tracks, intensity labels, emotion labels, and actor specifications. The proposed dataset can be used to surpass the lack of 3D datasets of expressive speech, and train more accurate emotional 3D talking head generators as compared to methods relying on 2D data as proxy.
+      </p>
+      <!-- <p>
+        
+      </p>
+      <p>
+        
+      </p> -->
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!--/ Proposed Method. -->  
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The domain of 3D talking head generation has witnessed significant progress in recent years. A notable challenge in this field consists in blending speech-related motions with expression dynamics, which is primarily caused by the lack of comprehensive 3D datasets that combine diversity in spoken sentences with a variety of facial expressions. Whereas literature works attempted to exploit 2D video data and parametric 3D models as a workaround, these still show limitations when jointly modeling the two motions. In this work, we address this problem from a different perspective, and propose an innovative data-driven technique that we used for creating a synthetic dataset, called EmoVOCA, obtained by combining a collection of inexpressive 3D talking heads and a set of 3D expressive sequences. To demonstrate the advantages of this approach, and the quality of the dataset, we then designed and trained an emotional 3D talking head generator that accepts a 3D face, an audio file, an emotion label, and an intensity value as inputs, and learns to animate the audio-synchronized lip movements with expressive traits of the face. Comprehensive experiments, both quantitative and qualitative, using our data and generator evidence superior ability in synthesizing convincing animations, when compared with the best performing methods in the literature.
+
+
+
+          </p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    
+    <!-- Proposed Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 centered-title">Proposed Method</h2>
+        <div class="content has-text-justified">
+          <img src="./static/videos/method.png" alt="scantalk">
+          <p>
+            <br>
+            Overview of our framework. Two distinct encoders process the talking and expressive 3D head displacements, separately, while a common decoder is trained to reconstruct them. At inference, talking and emotional heads are combined by concatenating the encoded latent vectors, and the decoder outputs a combination of their displacements.
+          </p>
+          <!-- <p>
+            
+          </p>
+          <p>
+            
+          </p> -->
+        </div>
+      </div>
+    </div>
+    <!--/ Proposed Method. -->  
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 centered-title">Intro Video</h2>
+    <div class="hero-body">
+      <video id="teaser" controls playsinline height="100%">
+        <source src="./static/videos/wacv25-1328.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- 
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 centered-title">Qualitative Examples</h2>
+    
+    <div class="hero-body video-row">
+      <video id="teaser1" class="video-item" controls playsinline>
+        <source src="./static/videos/Thanos_20s.mp4" type="video/mp4">
+      </video>
+      <video id="teaser2" class="video-item" controls playsinline>
+        <source src="./static/videos/test_arnold_shrek.mp4" type="video/mp4">
+      </video>
+      <video id="teaser3" class="video-item" controls playsinline>
+        <source src="./static/videos/test_thanks_long.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="hero-body video-row">
+      <video id="teaser4" class="video-item" controls playsinline>
+        <source src="./static/videos/VOCA_rock.mp4" type="video/mp4">
+      </video>
+      <video id="teaser5" class="video-item" controls playsinline>
+        <source src="./static/videos/Anime_Cold_Dip.mp4" type="video/mp4">
+      </video>
+      <video id="teaser6" class="video-item" controls playsinline>
+        <source src="./static/videos/BIWI_photo.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+-->
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @inproceedings{nocentini2024emovocaspeechdrivenemotional3d,
+        title={EmoVOCA: Speech-Driven Emotional 3D Talking Heads}, 
+        author={Federico Nocentini and Claudio Ferrari and Stefano Berretti},
+        booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)},
+        year = {2025},
+      }
+</code></pre>
+  </div>
+</section>
+ 
+
+
+
+<footer class="footer">
+  <div class="container">
+      <div class="content has-text-centered">
+          <a class="icon-link" href="./media/scantalk.pdf">
+              <i class="fas fa-file-pdf"></i>
+          </a>
+          <a class="icon-link" href="https://github.com/miccunifi/ScanTalk/" class="external-link" disabled>
+              <i class="fab fa-github"></i>
+          </a>
+      </div>
+      <div class="columns is-centered">
+          <div class="column is-8">
+              <div class="content">
+                  <p style="text-align:center">
+                    This website is licensed under a <a rel="license"
+                    href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                    Commons Attribution-ShareAlike 4.0 International License</a>.
+                  </p>
+                  <p style="text-align:center">
+                    Website source code based on the <a
+                    href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project page.
+                  </p>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+</body>
+</html>
