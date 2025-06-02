@@ -9,6 +9,15 @@ redirect_from:
 
 {% include base_path %}
 
+Experience
+======
+* **Flawless AI**
+  * Research Scientist Intern
+  * Los Angeles, California
+  * November 2024 - May 2025
+  * Topics of research: Multi Lingual Audio Driven Facial Animation
+
+
 Education
 ======
 * **PhD in 3D Computer Vision and Artificial Intelligence**
@@ -43,9 +52,7 @@ Skills
 ======
 * Framework and Tools: PyTorch, Pytorch3D, Tensorflow, Open3D, Trimesh, Numpy, Pandas, Matplotlib, OpenCV
 
-* Programming Languages: Python, Java, C++, C, Javascript
-
-* Miscellaneous: Git, bash
+* Programming Languages: Python, Java, C++, C, Javascript, Cuda
 
 Languages
 ======
@@ -73,4 +80,4 @@ Languages
   * Sequential Python and parallel CUDA and OpenMP implementations of the k-means clustering algorithm. The execution times obtained for datasets of increasing dimension are compared to measure the speedup of the parallel versions.
 
 
-[Download PDF version of my CV](/files/Federico_Nocentini_CV_.pdf)
+[Download PDF version of my CV](/files/Federico_Nocentini_CV_New.pdf)
