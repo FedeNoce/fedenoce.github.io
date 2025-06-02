@@ -9,9 +9,7 @@ redirect_from:
 
 I am Federico Nocentini. I am a 3rd year PhD student at the [University of Florence](https://www.unifi.it/changelang-eng.html) at the [Media Integration and Communication Center (MICC)](https://www.micc.unifi.it/) under the supervision of [Prof. Stefano Berretti](https://www.micc.unifi.it/berretti/) and [Prof. Claudio Ferrari](https://clferrari.github.io/).
 
-
-Currently, I am a research scientist intern at [Flawless AI](https://www.flawlessai.com/), where I focus on multilingual speech-driven facial animation. I am working under the supervision of [Akin Caliskan](https://akincaliskan3d.github.io/).
-
+I was a research scientist intern at [Flawless AI](https://www.flawlessai.com/), where I focused on multilingual speech-driven facial animation under the supervision of [Akin Caliskan](https://akincaliskan3d.github.io/).
 
 My main research interest revolve around 3D Computer Vision and Deep Learning, with a particular focus on human analysis applications, 3D and 4D generative face models.
 
@@ -22,9 +20,11 @@ _If you wish to learn more about my research or explore potential collaborations
 Latest News
 ======
 
+- Our paper [3D Face Reconstruction Error Decomposed: A Modular Benchmark for Fair and Fast Method Evaluation](https://arxiv.org/pdf/2505.18025) has been accepted at [FG 2025](https://fg2025.ieee-biometrics.org/).
+
 - Our paper [EmoVOCA: Speech-Driven Emotional 3D Talking Heads](https://fedenoce.github.io/emovoca/) has been accepted at [WACV 2025](https://wacv2025.thecvf.com/).
 
-- Our new paper [Beyond Fixed Topologies: Unregistered Training and Comprehensive Evaluation Metrics for 3D Talking Heads](https://arxiv.org/abs/2410.11041) is available on ArXiv.
+- Our paper [Beyond Fixed Topologies: Unregistered Training and Comprehensive Evaluation Metrics for 3D Talking Heads](https://arxiv.org/abs/2410.11041) is available on ArXiv.
 
 - I presented our Demo [EmoVOCA: Speech-Driven Emotional 3D Talking Heads](https://arxiv.org/abs/2403.12886) at [ECCV 2024](https://eccv2024.ecva.net/).
 
