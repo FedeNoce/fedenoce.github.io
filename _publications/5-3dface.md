@@ -7,7 +7,7 @@ Benchmark (M3DFB), where the fundamental components of
 error computation are segregated and interchangeable, allowing
 one to quantify the effect of each.'
 date: 2025-05-25
-venue: 'EEE conference series on Automatic Face and Gesture Recognition (FG)(Oral)'
+venue: 'IEEE conference series on Automatic Face and Gesture Recognition (FG)(Oral)'
 paperurl: 'https://arxiv.org/pdf/2505.18025'
 
 ---
