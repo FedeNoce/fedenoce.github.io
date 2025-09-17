@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+[Download PDF version of my CV](/files/Federico_Nocentini_CV_New.pdf)
+
 Experience
 ======
 * **Flawless AI**
@@ -78,6 +80,3 @@ Languages
 
 * **K-means clustering with CUDA and OpenMP**
   * Sequential Python and parallel CUDA and OpenMP implementations of the k-means clustering algorithm. The execution times obtained for datasets of increasing dimension are compared to measure the speedup of the parallel versions.
-
-
-[Download PDF version of my CV](/files/Federico_Nocentini_CV_New.pdf)
