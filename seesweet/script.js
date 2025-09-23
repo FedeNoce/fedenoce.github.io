@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle.addEventListener("click", () => {
       const prodotti = toggle.nextElementSibling;
 
-      // Toggle con animazione semplice
+      // Toggle classico
       if (prodotti.style.display === "block") {
         prodotti.style.display = "none";
       } else {

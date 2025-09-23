@@ -1,26 +1,24 @@
 .categoria .prodotti {
-  display: none; /* inizialmente nascondiamo tutti i prodotti */
+  display: none; /* prodotti nascosti inizialmente */
   padding: 0.5rem 0;
 }
+
 .categoria .prodotti article {
-  display: inline-block; 
+  display: inline-block;
   width: 200px;
   margin: 0.5rem;
   vertical-align: top;
   text-align: center;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  padding: 0.5rem;
 }
+
 .categoria .prodotti article img {
   width: 200px;
   height: 200px;
-  object-fit: cover; /* forza le immagini a coprire lo spazio senza deformarsi */
+  object-fit: cover; /* mantiene proporzioni ma riempie il box */
   border-radius: 8px;
 }
 
-/* Responsive */
+/* Responsive mobile */
 @media (max-width: 600px) {
   .categoria .prodotti article {
     width: 100%;
