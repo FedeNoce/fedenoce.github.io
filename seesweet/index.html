@@ -4,35 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catalogo Dolci B.N.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     /* RESET E FONT */
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Roboto', sans-serif; background: #fdf6f0; color: #333; }
+    body { font-family: 'Poppins', sans-serif; background: #f0f8ff; color: #333; }
     h1,h2,h3 { color: #4b2e2e; }
-    img { display: block; width: 100%; height: auto; object-fit: cover; }
+    img { display: block; width: 100%; height: auto; object-fit: contain; }
 
     /* HEADER */
-    header { display: flex; align-items: center; justify-content: center; padding: 1rem; background: #fff8f0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    header .logo { max-width: 200px; }
+    header { display: flex; justify-content: center; padding: 1rem; background: #e0f7fa; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    header .logo { max-width: 180px; }
 
     /* MAIN TITULO */
     main { padding: 1rem; }
-    h1 { text-align: center; margin-bottom: 1rem; font-size: 1.8rem; }
+    h1 { text-align: center; margin-bottom: 1rem; font-size: 2rem; }
 
     /* SEZIONI */
-    .categoria { margin-bottom: 1rem; border: 1px solid #f0d9c0; border-radius: 10px; overflow: hidden; background: #fff; }
-    .toggle { cursor: pointer; padding: 0.8rem 1rem; background: #f0d9c0; font-weight: bold; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; }
+    .categoria { margin-bottom: 1rem; border: 1px solid #b2ebf2; border-radius: 12px; overflow: hidden; background: #ffffff; }
+    .toggle { cursor: pointer; padding: 1rem; background: #b2ebf2; font-weight: 600; display: flex; justify-content: center; align-items: center; font-size: 1.1rem; border-bottom: 1px solid #81d4fa; transition: background 0.2s; }
+    .toggle:hover { background: #81d4fa; color: #fff; }
     .prodotti { display: none; padding: 1rem; }
 
     /* GRIGLIA PRODOTTI */
     .prodotti { display: none; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; }
-    article { background: #fff8f0; border-radius: 10px; padding: 0.5rem; text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
+    article { background: #f0f8ff; border-radius: 10px; padding: 0.5rem; text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
     article:hover { transform: translateY(-3px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
 
     article h3 { font-size: 1rem; margin: 0.5rem 0; }
     article p { font-size: 0.9rem; margin-bottom: 0.3rem; }
-    .prezzo { font-weight: bold; color: #b84141; }
+    .prezzo { font-weight: bold; color: #d32f2f; }
 
     /* FOOTER */
     footer { text-align: center; padding: 1rem; font-size: 0.9rem; color: #777; }
@@ -51,7 +52,7 @@
   <main>
     <h1>Catalogo Dolci B.N.</h1>
 
-    <!-- Ripeti questa struttura per tutte le categorie -->
+    <!-- Babà -->
     <section class="categoria">
       <h2 class="toggle">Babà ▼</h2>
       <div class="prodotti">
@@ -67,16 +68,9 @@
           <p>Varianti: crema al pistacchio, amarene, fragole.</p>
           <p class="prezzo">XX,XX €</p>
         </article>
-        <article>
-          <img src="./assets/immagini/img_3.jpeg" alt="Tronco Babà">
-          <h3>Tronco Babà</h3>
-          <p>Varianti: crema e fragole, panna e cioccolato.</p>
-          <p class="prezzo">XX,XX €</p>
-        </article>
       </div>
     </section>
 
-    <!-- Aggiungi qui tutte le altre categorie con lo stesso formato -->
     <!-- Rotoli e Tranci -->
     <section class="categoria">
       <h2 class="toggle">Rotoli e Tranci ▼</h2>
@@ -96,8 +90,6 @@
       </div>
     </section>
 
-    <!-- Aggiungi tutte le altre categorie come Torte, Monoporzioni, Mignon ecc. seguendo la stessa struttura -->
-
   </main>
 
   <footer>
@@ -105,7 +97,6 @@
   </footer>
 
   <script>
-    // Funzionamento tendine
     document.addEventListener("DOMContentLoaded", () => {
       const toggles = document.querySelectorAll(".toggle");
       toggles.forEach(toggle => {
