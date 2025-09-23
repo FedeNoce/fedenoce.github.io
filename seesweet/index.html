@@ -18,20 +18,21 @@
     img { display: block; width: 100%; height: auto; object-fit: contain; }
 
     /* HEADER */
+
     header {
       display: flex;
-      justify-content: center;   /* mette i loghi al centro */
-      align-items: center;       /* li allinea verticalmente */
-      gap: 10px;                 /* spazio tra i loghi */
-      padding: 1rem;
+      justify-content: center;   /* loghi centrati */
+      align-items: center;       /* allineati verticalmente */
+      gap: 6px;                  /* spazio minimo tra i loghi */
+      padding: 0.8rem;
       background: #2384da;
       box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     }
 
     .logo {
-      max-width: 250px;  /* ridotto per stare entrambi */
-      width: 100%;
-      height: auto;
+      max-width: 200px;          /* dimensione massima per desktop */
+      width: 20vw;               /* occupano circa il 20% dello schermo */
+      height: auto;              /* mantiene proporzioni */
     }
 
     main { padding: 1rem; }
