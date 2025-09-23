@@ -4,44 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Catalogo Dolci B.N.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    /* RESET E FONT */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Roboto', sans-serif; background: #fdf6f0; color: #333; }
-    h1,h2,h3 { color: #4b2e2e; }
-    img { display: block; width: 100%; height: auto; object-fit: cover; }
-
-    /* HEADER */
-    header { display: flex; align-items: center; justify-content: center; padding: 1rem; background: #fff8f0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    header .logo { max-width: 200px; }
-
-    /* MAIN TITULO */
-    main { padding: 1rem; }
-    h1 { text-align: center; margin-bottom: 1rem; font-size: 1.8rem; }
-
-    /* SEZIONI */
-    .categoria { margin-bottom: 1rem; border: 1px solid #f0d9c0; border-radius: 10px; overflow: hidden; background: #fff; }
-    .toggle { cursor: pointer; padding: 0.8rem 1rem; background: #f0d9c0; font-weight: bold; display: flex; justify-content: space-between; align-items: center; font-size: 1.1rem; }
-    .prodotti { display: none; padding: 1rem; }
-
-    /* GRIGLIA PRODOTTI */
-    .prodotti { display: none; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; }
-    article { background: #fff8f0; border-radius: 10px; padding: 0.5rem; text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
-    article:hover { transform: translateY(-3px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-
-    article h3 { font-size: 1rem; margin: 0.5rem 0; }
-    article p { font-size: 0.9rem; margin-bottom: 0.3rem; }
-    .prezzo { font-weight: bold; color: #b84141; }
-
-    /* FOOTER */
-    footer { text-align: center; padding: 1rem; font-size: 0.9rem; color: #777; }
-
-    /* RESPONSIVE */
-    @media (min-width: 600px) {
-      .prodotti { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -51,52 +14,41 @@
   <main>
     <h1>Catalogo Dolci B.N.</h1>
 
-    <!-- Ripeti questa struttura per tutte le categorie -->
-    <section class="categoria">
-      <h2 class="toggle">Babà ▼</h2>
-      <div class="prodotti">
-        <article>
-          <img src="./assets/immagini/img_1.jpeg" alt="Babà mignon">
-          <h3>Babà mignon</h3>
-          <p>Confezioni da 15 o 30 pezzi, vari gusti disponibili.</p>
-          <p class="prezzo">XX,XX €</p>
-        </article>
-        <article>
-          <img src="./assets/immagini/img_2.jpeg" alt="Monoporzione Savarin">
-          <h3>Monoporzione Savarin</h3>
-          <p>Varianti: crema al pistacchio, amarene, fragole.</p>
-          <p class="prezzo">XX,XX €</p>
-        </article>
-        <article>
-          <img src="./assets/immagini/img_3.jpeg" alt="Tronco Babà">
-          <h3>Tronco Babà</h3>
-          <p>Varianti: crema e fragole, panna e cioccolato.</p>
-          <p class="prezzo">XX,XX €</p>
-        </article>
-      </div>
-    </section>
+    <!-- Babà -->
+    <button class="toggle">Babà ▼</button>
+    <div class="prodotti">
+      <article>
+        <img src="./assets/immagini/img_1.jpeg" alt="Babà mignon">
+        <h3>Babà mignon</h3>
+        <p>Confezioni da 15 o 30 pezzi, vari gusti disponibili.</p>
+        <p class="prezzo">Prezzo: XX,XX €</p>
+      </article>
+      <article>
+        <img src="./assets/immagini/img_2.jpeg" alt="Monoporzione Savarin">
+        <h3>Monoporzione Savarin</h3>
+        <p>Varianti: crema al pistacchio, amarene, fragole.</p>
+        <p class="prezzo">Prezzo: XX,XX €</p>
+      </article>
+    </div>
 
-    <!-- Aggiungi qui tutte le altre categorie con lo stesso formato -->
     <!-- Rotoli e Tranci -->
-    <section class="categoria">
-      <h2 class="toggle">Rotoli e Tranci ▼</h2>
-      <div class="prodotti">
-        <article>
-          <img src="./assets/immagini/img_5.jpeg" alt="Rotolo Pistacchio">
-          <h3>Rotolo Pistacchio</h3>
-          <p>Pan di spagna, mousse ricotta e pistacchio.</p>
-          <p class="prezzo">XX,XX €</p>
-        </article>
-        <article>
-          <img src="./assets/immagini/img_5.jpeg" alt="Rotolo Cuor di Fragola">
-          <h3>Rotolo Cuor di Fragola</h3>
-          <p>Pan di spagna, crema chantilly e fragoline.</p>
-          <p class="prezzo">XX,XX €</p>
-        </article>
-      </div>
-    </section>
+    <button class="toggle">Rotoli e Tranci ▼</button>
+    <div class="prodotti">
+      <article>
+        <img src="./assets/immagini/img_3.jpeg" alt="Rotolo Pistacchio">
+        <h3>Rotolo Pistacchio</h3>
+        <p>Pan di spagna, mousse ricotta e pistacchio.</p>
+        <p class="prezzo">Prezzo: XX,XX €</p>
+      </article>
+      <article>
+        <img src="./assets/immagini/img_4.jpeg" alt="Rotolo Cuor di Fragola">
+        <h3>Rotolo Cuor di Fragola</h3>
+        <p>Pan di spagna, crema chantilly e fragoline.</p>
+        <p class="prezzo">Prezzo: XX,XX €</p>
+      </article>
+    </div>
 
-    <!-- Aggiungi tutte le altre categorie come Torte, Monoporzioni, Mignon ecc. seguendo la stessa struttura -->
+    <!-- Aggiungi qui le altre categorie seguendo lo stesso pattern -->
 
   </main>
 
@@ -105,22 +57,21 @@
   </footer>
 
   <script>
-    // Funzionamento tendine
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggles = document.querySelectorAll(".toggle");
-      toggles.forEach(toggle => {
-        toggle.addEventListener("click", () => {
-          const prodotti = toggle.nextElementSibling;
-          if (prodotti.style.display === "grid") {
-            prodotti.style.display = "none";
-            toggle.textContent = toggle.textContent.replace("▲","▼");
-          } else {
-            prodotti.style.display = "grid";
-            toggle.textContent = toggle.textContent.replace("▼","▲");
-          }
-        });
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggles = document.querySelectorAll(".toggle");
+    toggles.forEach(toggle => {
+      toggle.addEventListener("click", () => {
+        const prodotti = toggle.nextElementSibling;
+        if (prodotti.style.display === "grid") {
+          prodotti.style.display = "none";
+          toggle.textContent = toggle.textContent.replace("▲","▼");
+        } else {
+          prodotti.style.display = "grid";
+          toggle.textContent = toggle.textContent.replace("▼","▲");
+        }
       });
     });
+  });
   </script>
 </body>
 </html>
