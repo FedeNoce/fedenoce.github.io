@@ -26,15 +26,8 @@
     .toggle.active::after { transform: rotate(180deg); }
     .toggle:hover { background: #81d4fa; color: #fff; }
 
-    .prodotti {
-      display: none; /* inizialmente nascosta */
-      padding: 1rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 1rem;
-    }
+    .prodotti { display: none; padding: 1rem; grid-gap: 1rem; }
     
-
     /* CARD PRODOTTI */
     article { background: #f0f8ff; border-radius: 12px; padding: 0.5rem; text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
     article:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
