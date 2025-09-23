@@ -9,6 +9,7 @@
   <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet"> -->
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    /* body { font-family: 'Poppins', sans-serif; background: #f0f8ff; color: #333; }*/
     body {
       font-family: 'Raleway', sans-serif; ; background: #f0f8ff; color: #333; 
     }
@@ -17,11 +18,20 @@
     img { display: block; width: 100%; height: auto; object-fit: contain; }
 
     /* HEADER */
-    header { display: flex; justify-content: center; padding: 1rem; background: #2384da; box-shadow: 0 3px 6px rgba(0,0,0,0.1); }
+    header {
+      display: flex;
+      justify-content: center;   /* mette i loghi al centro */
+      align-items: center;       /* li allinea verticalmente */
+      gap: 20px;                 /* spazio tra i loghi */
+      padding: 1rem;
+      background: #2384da;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
     .logo {
-      max-width: 400px;  /* maximum size */
-      width: 100%;       /* allows it to shrink below max-width */
-      height: auto;      /* maintains aspect ratio */
+      max-width: 200px;  /* ridotto per stare entrambi */
+      width: 100%;
+      height: auto;
     }
 
     main { padding: 1rem; }
@@ -53,6 +63,7 @@
 <body>
   <header>
     <img src="./assets/immagini/logo_new.png" alt="Dolci B.N. Logo" class="logo">
+    <img src="./assets/immagini/logo_bn.png" alt="Secondo Logo" class="logo">
   </header>
 
   <main>
