@@ -13,27 +13,8 @@
     img { display: block; width: 100%; height: auto; object-fit: contain; }
 
     /* HEADER */
-    header {
-      display: flex;
-      justify-content: center;
-      padding: 1rem;
-      background: #e0f7fa;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-    }
-    
-    header .logo {
-      width: 50%;        /* scala in base alla larghezza dello schermo */
-      max-width: 180px;  /* massimo su desktop */
-      height: auto;      /* mantiene le proporzioni */
-      object-fit: contain; /* non taglia l'immagine */
-    }
-    
-    @media (max-width: 400px) {
-      header .logo {
-        width: 70%;      /* leggermente più grande su schermi piccoli */
-        max-width: 150px;
-      }
-    }
+    header { display: flex; justify-content: center; padding: 1rem; background: #e0f7fa; box-shadow: 0 3px 6px rgba(0,0,0,0.1); }
+    header .logo { max-width: 180px; }
 
     main { padding: 1rem; }
     h1 { text-align: center; margin-bottom: 1.5rem; font-size: 2rem; letter-spacing: 1px; }
