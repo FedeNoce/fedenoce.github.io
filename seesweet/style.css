@@ -4,7 +4,6 @@ body {
   background: #fafafa;
   color: #333;
 }
-
 header {
   background: #8b0000;
   color: #fff;
@@ -13,86 +12,63 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-
 header .logo {
   height: 50px;
 }
-
 nav a {
   color: #fff;
   margin-left: 1rem;
   text-decoration: none;
   font-weight: bold;
 }
-
 nav a:hover {
   text-decoration: underline;
 }
-
 main {
-  padding: 2rem;
+  padding: 1rem;
 }
-
 h1, h2 {
   color: #8b0000;
 }
 
-.subnav {
-  margin: 1rem 0;
-}
-
-.subnav a {
-  margin-right: 1rem;
-  color: #8b0000;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.subnav a:hover {
-  text-decoration: underline;
-}
-
-footer {
-  background: #8b0000;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-.button {
-  display: inline-block;
-  padding: 0.7rem 1.2rem;
-  background: #8b0000;
-  color: #fff;
-  text-decoration: none;
+/* Sottocategorie a tendina */
+.categoria .toggle {
+  cursor: pointer;
+  background: #f5f5f5;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
+  margin-top: 1rem;
 }
-
-.button:hover {
-  background: #a30000;
+.categoria .prodotti {
+  display: none;
+  padding: 0.5rem 0;
 }
-
-article {
+.categoria .prodotti article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #fff;
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
 }
-
-article img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 0.5rem;
+.categoria .prodotti article img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
 }
-
-article h3 {
-  margin-top: 0;
-}
-
 .prezzo {
   font-weight: bold;
   color: #a30000;
+}
+
+/* Responsive per mobile */
+@media (max-width: 600px) {
+  .categoria .prodotti article img {
+    width: 100%;
+    height: auto;
+  }
 }
