@@ -3,42 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Catalogo Dolci B.N.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>EatSweet - Catalogo Dolci B.N.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    /* RESET E FONT */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Poppins', sans-serif; background: #f0f8ff; color: #333; }
+
     h1,h2,h3 { color: #4b2e2e; }
     img { display: block; width: 100%; height: auto; object-fit: contain; }
 
     /* HEADER */
-    header { display: flex; justify-content: center; padding: 1rem; background: #e0f7fa; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    header { display: flex; justify-content: center; padding: 1rem; background: #e0f7fa; box-shadow: 0 3px 6px rgba(0,0,0,0.1); }
     header .logo { max-width: 180px; }
 
-    /* MAIN TITULO */
     main { padding: 1rem; }
-    h1 { text-align: center; margin-bottom: 1rem; font-size: 2rem; }
+    h1 { text-align: center; margin-bottom: 1.5rem; font-size: 2rem; letter-spacing: 1px; }
 
-    /* SEZIONI */
-    .categoria { margin-bottom: 1rem; border: 1px solid #b2ebf2; border-radius: 12px; overflow: hidden; background: #ffffff; }
-    .toggle { cursor: pointer; padding: 1rem; background: #b2ebf2; font-weight: 600; display: flex; justify-content: center; align-items: center; font-size: 1.1rem; border-bottom: 1px solid #81d4fa; transition: background 0.2s; }
+    /* CATEGORIE */
+    .categoria { margin-bottom: 1.5rem; border-radius: 14px; overflow: hidden; background: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    .toggle { cursor: pointer; padding: 1rem; background: #b2ebf2; font-weight: 600; display: flex; justify-content: center; align-items: center; font-size: 1.15rem; transition: all 0.3s; position: relative; }
+    .toggle::after { content: "▼"; margin-left: 10px; transition: transform 0.3s; }
+    .toggle.active::after { transform: rotate(180deg); }
     .toggle:hover { background: #81d4fa; color: #fff; }
-    .prodotti { display: none; padding: 1rem; }
 
-    /* GRIGLIA PRODOTTI */
-    .prodotti { display: none; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; }
-    article { background: #f0f8ff; border-radius: 10px; padding: 0.5rem; text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
-    article:hover { transform: translateY(-3px); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+    .prodotti { display: none; padding: 1rem; grid-gap: 1rem; }
+    .prodotti { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; }
 
-    article h3 { font-size: 1rem; margin: 0.5rem 0; }
+    /* CARD PRODOTTI */
+    article { background: #f0f8ff; border-radius: 12px; padding: 0.5rem; text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
+    article:hover { transform: translateY(-3px); box-shadow: 0 6px 12px rgba(0,0,0,0.1); }
+    article h3 { font-size: 1rem; margin: 0.5rem 0; font-weight: 500; }
     article p { font-size: 0.9rem; margin-bottom: 0.3rem; }
-    .prezzo { font-weight: bold; color: #d32f2f; }
+    .prezzo { font-weight: 700; color: #d32f2f; }
 
-    /* FOOTER */
     footer { text-align: center; padding: 1rem; font-size: 0.9rem; color: #777; }
 
-    /* RESPONSIVE */
     @media (min-width: 600px) {
       .prodotti { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
     }
@@ -46,15 +45,15 @@
 </head>
 <body>
   <header>
-    <img src="./assets/immagini/img_1.jpeg" alt="Dolci B.N. Logo" class="logo">
+    <img src="./assets/immagini/logo.png" alt="Dolci B.N. Logo" class="logo">
   </header>
 
   <main>
-    <h1>Catalogo Dolci B.N.</h1>
+    <h1>EatSweet</h1>
 
     <!-- Babà -->
     <section class="categoria">
-      <h2 class="toggle">Babà ▼</h2>
+      <h2 class="toggle">Babà</h2>
       <div class="prodotti">
         <article>
           <img src="./assets/immagini/img_1.jpeg" alt="Babà mignon">
@@ -73,7 +72,7 @@
 
     <!-- Rotoli e Tranci -->
     <section class="categoria">
-      <h2 class="toggle">Rotoli e Tranci ▼</h2>
+      <h2 class="toggle">Rotoli e Tranci</h2>
       <div class="prodotti">
         <article>
           <img src="./assets/immagini/img_5.jpeg" alt="Rotolo Pistacchio">
@@ -89,7 +88,6 @@
         </article>
       </div>
     </section>
-
   </main>
 
   <footer>
@@ -102,13 +100,9 @@
       toggles.forEach(toggle => {
         toggle.addEventListener("click", () => {
           const prodotti = toggle.nextElementSibling;
-          if (prodotti.style.display === "grid") {
-            prodotti.style.display = "none";
-            toggle.textContent = toggle.textContent.replace("▲","▼");
-          } else {
-            prodotti.style.display = "grid";
-            toggle.textContent = toggle.textContent.replace("▼","▲");
-          }
+          const isOpen = prodotti.style.display === "grid";
+          prodotti.style.display = isOpen ? "none" : "grid";
+          toggle.classList.toggle("active", !isOpen);
         });
       });
     });
