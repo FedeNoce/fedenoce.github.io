@@ -50,8 +50,10 @@ h1, h2 {
 }
 
 .prodotti {
-  display: none;
-  margin-top: 0.5rem;
+  display: none; /* chiuse di default */
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
 }
 
 .prodotti article {
