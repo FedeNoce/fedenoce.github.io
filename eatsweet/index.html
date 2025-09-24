@@ -40,7 +40,39 @@
 
     /* CATEGORIE */
     .categoria { margin-bottom: 1.5rem; border-radius: 14px; overflow: hidden; background: #ffffff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-    .toggle { cursor: pointer; padding: 1rem; background: #b2ebf2; font-weight: 600; display: flex; justify-content: center; align-items: center; font-size: 1.15rem; transition: all 0.3s; position: relative; }
+    /* BOTTONI TOGGLE */
+    .toggle {
+      cursor: pointer;
+      padding: 0.6rem 1rem;      /* meno padding */
+      background: #b2ebf2;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;           /* più piccolo su default */
+      transition: all 0.3s;
+      position: relative;
+      text-align: center;
+      border-radius: 8px;        /* più moderno */
+    }
+
+    /* Desktop */
+    @media (min-width: 768px) {
+      .toggle {
+        font-size: 1.1rem;       /* un po’ più grande solo su desktop */
+        padding: 0.5rem 0.8rem;  /* bottoni più bassi */
+        max-width: 250px;        /* non si allargano come i prodotti */
+        margin: 0 auto;          /* centrati */
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 767px) {
+      .toggle {
+        width: 100%;             /* su mobile il bottone occupa tutta la larghezza */
+        font-size: 1rem;
+      }
+}
     .toggle::after { content: "▼"; margin-left: 10px; transition: transform 0.3s; }
     .toggle.active::after { transform: rotate(180deg); }
     .toggle:hover { background: #81d4fa; color: #fff; }
