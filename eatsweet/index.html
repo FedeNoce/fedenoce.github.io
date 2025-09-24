@@ -46,6 +46,19 @@
     .toggle:hover { background: #81d4fa; color: #fff; }
 
     .prodotti { display: none; padding: 1rem; grid-gap: 1rem; }
+
+    .close-toggle {
+      margin-top: 1rem;
+      padding: 0.5rem 1rem;
+      background: #b33;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .close-toggle:hover {
+      background: #922;
+    }
     
     /* CARD PRODOTTI */
     article { background: #f0f8ff; border-radius: 12px; padding: 0.5rem; text-align: center; transition: transform 0.2s, box-shadow 0.2s; }
@@ -656,6 +669,8 @@
           <h3>Limone e Fragola</h3>
           <p class="prezzo">1pz 25€</p>
         </article>
+      </div>
+    </section>
       
       <!-- Mignon: Trancetti  -->
     <section class="categoria">
@@ -691,6 +706,8 @@
           <h3>Cocco e Nocciolata</h3>
           <p class="prezzo">1pz 25€</p>
         </article>
+      </div>
+    </section>
 
          <!-- Mignon: Trancetti  -->
     <section class="categoria">
@@ -720,8 +737,6 @@
           <img src="./assets/immagini/info_mignon.png" alt="Trancio Limone">
           <h3>Peso e Gusti</h3>
         </article>
-
-      </div>
       </div>
     </section>
 
@@ -733,15 +748,35 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const toggles = document.querySelectorAll(".toggle");
+  
       toggles.forEach(toggle => {
-        toggle.addEventListener("click", () => {
-          const prodotti = toggle.nextElementSibling;
+        const prodotti = toggle.nextElementSibling;
+  
+        // Crea e aggiungi il bottone di chiusura alla fine della sezione prodotti
+        const closeBtn = document.createElement("button");
+        closeBtn.textContent = "Chiudi";
+        closeBtn.classList.add("close-toggle");
+        prodotti.appendChild(closeBtn);
+  
+        // Funzione per aprire/chiudere
+        const toggleProdotti = (forceClose = false) => {
           const isOpen = prodotti.style.display === "grid";
-          prodotti.style.display = isOpen ? "none" : "grid";
-          toggle.classList.toggle("active", !isOpen);
+          const shouldClose = forceClose || isOpen;
+          prodotti.style.display = shouldClose ? "none" : "grid";
+          toggle.classList.toggle("active", !shouldClose);
+        };
+  
+        // Clic sul titolo per aprire/chiudere
+        toggle.addEventListener("click", () => toggleProdotti());
+  
+        // Clic sul bottone di chiusura
+        closeBtn.addEventListener("click", (e) => {
+          e.stopPropagation(); // evita che richiami anche il toggle del titolo
+          toggleProdotti(true);
         });
       });
     });
   </script>
+  
 </body>
 </html>
