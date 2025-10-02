@@ -732,29 +732,12 @@
           </article>
         </div>
       </section>
-  
 
     <footer>
       <p>© 2025 EatSweet | Catalogo online</p>
     </footer>
   </main>
 
-  <style>
-    .bg-layer {
-      position: absolute;
-      width: 150px;
-      height: 150px;
-      background-size: cover;
-      background-position: center;
-      filter: blur(3px) brightness(0.8); /* meno sfocatura */
-      opacity: 0.5;
-      border-radius: 12px;
-      z-index: -1;
-      pointer-events: none;
-      transition: all 0.5s;
-    }
-  </style>
-  
   <script>
     const images = [
       "./assets/background/bg01.png",
@@ -764,34 +747,38 @@
       "./assets/background/bg05.png",
       "./assets/background/bg06.png"
     ];
-  
+
     document.addEventListener("DOMContentLoaded", () => {
       const main = document.querySelector("main");
-      const nLayers = 10;
-  
-      const padding = 50; // distanza minima dai bordi
-      const usedPositions = [];
-  
-      for (let i = 0; i < nLayers; i++) {
+
+      // Genera sfondi randomici
+      for (let i = 0; i < 12; i++) {
         const imgPath = images[Math.floor(Math.random() * images.length)];
         const layer = document.createElement("div");
         layer.classList.add("bg-layer");
         layer.style.backgroundImage = `url(${imgPath})`;
-  
-        let x, y;
-        let tries = 0;
-        do {
-          x = padding + Math.random() * (main.clientWidth - 150 - 2 * padding);
-          y = padding + Math.random() * (main.clientHeight - 150 - 2 * padding);
-          tries++;
-        } while (usedPositions.some(pos => Math.abs(pos.x - x) < 180 && Math.abs(pos.y - y) < 180) && tries < 100);
-  
-        usedPositions.push({ x, y });
-        layer.style.left = `${x}px`;
-        layer.style.top = `${y}px`;
-  
+
+        const maxX = main.clientWidth - 150;
+        const maxY = main.clientHeight - 150;
+        layer.style.left = `${Math.random() * maxX}px`;
+        layer.style.top = `${Math.random() * maxY}px`;
+
         main.appendChild(layer);
       }
+
+      // Toggle categorie
+      document.querySelectorAll(".toggle").forEach(toggle => {
+        toggle.addEventListener("click", () => {
+          toggle.classList.toggle("active");
+          const prodotti = toggle.nextElementSibling;
+          if (prodotti.style.display === "grid") {
+            prodotti.style.display = "none";
+          } else {
+            prodotti.style.display = "grid";
+          }
+        });
+      });
     });
   </script>
-  
+</body>
+</html>
