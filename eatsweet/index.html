@@ -85,9 +85,7 @@
 
     <!-- Babà -->
     <section class="categoria">
-      <h2 class="toggle">Babà
-        <img src="./assets/immagini/baba.jpeg" alt="Icona Babà" class="icona-categoria"  style="width:24px; height:24px; object-fit:contain; margin-right:6px;">
-      </h2>
+      <h2 class="toggle">Babà</h2>
       <div class="prodotti">
         <article>
           <img src="./assets/immagini/baba.jpeg" alt="Babà mignon">
@@ -782,3 +780,42 @@
   
 </body>
 </html>
+
+<style>
+  body {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  /* Adatta immagine alla finestra */
+    min-height: 100vh;
+  }
+
+  /* Per rendere più leggibile il contenuto sopra le immagini */
+  main, header, footer {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+</style>
+
+<script>
+  // Lista immagini da usare come background
+  const images = [
+    "./assets/background/bg01.png",
+    "./assets/background/bg02.png",
+    "./assets/background/bg03.png",
+    "./assets/background/bg04.png",
+    "./assets/background/bg05.png",
+    "./assets/background/bg06.png"
+      ];
+
+  // Scegli una immagine casuale
+  const randomImage = images[Math.floor(Math.random() * images.length)];
+
+  // Applica al body
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.style.backgroundImage = `url(${randomImage})`;
+  });
+</script>
