@@ -745,77 +745,57 @@
     <p>© 2025 EatSweet | Catalogo online</p>
   </footer>
 
+  <style>
+    body {
+      font-family: 'Raleway', sans-serif;
+      color: #333;
+      min-height: 100vh;
+      margin: 0;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: background-image 0.5s ease-in-out;
+    }
+  
+    /* HEADER e FOOTER invariati */
+    header, footer {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 0.5rem;
+    }
+  
+    /* CARD PRODOTTI con effetto vetro satinato */
+    article {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 0.5rem;
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    article:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+  </style>
+  
   <script>
+    // Lista immagini di sfondo
+    const images = [
+      "./assets/background/bg01.png",
+      "./assets/background/bg02.png",
+      "./assets/background/bg03.png",
+      "./assets/background/bg04.png",
+      "./assets/background/bg05.png",
+      "./assets/background/bg06.png"
+    ];
+  
+    // Scegli immagine casuale
+    const randomImage = images[Math.floor(Math.random() * images.length)];
+  
     document.addEventListener("DOMContentLoaded", () => {
-      const toggles = document.querySelectorAll(".toggle");
-  
-      toggles.forEach(toggle => {
-        const prodotti = toggle.nextElementSibling;
-  
-        // Crea e aggiungi il bottone di chiusura alla fine della sezione prodotti
-        const closeBtn = document.createElement("button");
-        closeBtn.textContent = "Chiudi";
-        closeBtn.classList.add("close-toggle");
-        prodotti.appendChild(closeBtn);
-  
-        // Funzione per aprire/chiudere
-        const toggleProdotti = (forceClose = false) => {
-          const isOpen = prodotti.style.display === "grid";
-          const shouldClose = forceClose || isOpen;
-          prodotti.style.display = shouldClose ? "none" : "grid";
-          toggle.classList.toggle("active", !shouldClose);
-        };
-  
-        // Clic sul titolo per aprire/chiudere
-        toggle.addEventListener("click", () => toggleProdotti());
-  
-        // Clic sul bottone di chiusura
-        closeBtn.addEventListener("click", (e) => {
-          e.stopPropagation(); // evita che richiami anche il toggle del titolo
-          toggleProdotti(true);
-        });
-      });
+      document.body.style.backgroundImage = `url(${randomImage})`;
     });
   </script>
-  
-</body>
-</html>
-
-<style>
-  body {
-    font-family: 'Raleway', sans-serif;
-    color: #333;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;  /* Adatta immagine alla finestra */
-    min-height: 100vh;
-  }
-
-  /* Per rendere più leggibile il contenuto sopra le immagini */
-  main, header, footer {
-    background: rgba(255, 255, 255, 0.85);
-    border-radius: 10px;
-    padding: 1rem;
-    margin: 0.5rem;
-  }
-</style>
-
-<script>
-  // Lista immagini da usare come background
-  const images = [
-    "./assets/background/bg01.png",
-    "./assets/background/bg02.png",
-    "./assets/background/bg03.png",
-    "./assets/background/bg04.png",
-    "./assets/background/bg05.png",
-    "./assets/background/bg06.png"
-      ];
-
-  // Scegli una immagine casuale
-  const randomImage = images[Math.floor(Math.random() * images.length)];
-
-  // Applica al body
-  document.addEventListener("DOMContentLoaded", () => {
-    document.body.style.backgroundImage = `url(${randomImage})`;
-  });
-</script>
