@@ -779,8 +779,7 @@
   </script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      // Lista delle immagini tra cui scegliere
-      const immaginiSfondo = [
+      const immagini =[
       "./assets/background/bg01.png",
       "./assets/background/bg02.png",
       "./assets/background/bg03.png",
@@ -788,21 +787,40 @@
       "./assets/background/bg05.png",
       "./assets/background/bg06.png"
     ];
-
-  
-      // Seleziona un'immagine a caso
-      const randomIndex = Math.floor(Math.random() * immaginiSfondo.length);
-      const immagineScelta = immaginiSfondo[randomIndex];
-  
-      // Imposta lo sfondo solo per il body (non l'header)
-      // Imposta lo sfondo solo per il main
-    const main = document.querySelector('main');
-    main.style.backgroundImage = `url(${immagineScelta})`;
-    main.style.backgroundSize = 'cover';
-    main.style.backgroundPosition = 'center';
-    main.style.backgroundRepeat = 'no-repeat';
+    
+      const main = document.querySelector('main');
+    
+      function aggiungiImmagineRandom() {
+        const img = document.createElement('img');
+        const srcRandom = immagini[Math.floor(Math.random() * immagini.length)];
+        img.src = srcRandom;
+        
+        img.style.position = 'absolute';
+        img.style.width = `${50 + Math.random() * 150}px`; // larghezza random tra 50 e 200px
+        img.style.top = `${Math.random() * (main.offsetHeight - 50)}px`;
+        img.style.left = `${Math.random() * (main.offsetWidth - 50)}px`;
+        img.style.pointerEvents = 'none'; // per non bloccare click sui prodotti
+        img.style.opacity = 0.5 + Math.random() * 0.5; // opacità random tra 0.5 e 1
+    
+        main.appendChild(img);
+      }
+    
+      // Aggiunge alcune immagini iniziali
+      for (let i = 0; i < 5; i++) {
+        aggiungiImmagineRandom();
+      }
+    
+      // Aggiorna le immagini ogni volta che si apre un toggle
+      const toggles = document.querySelectorAll('.toggle');
+      toggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          // aggiungi da 1 a 3 nuove immagini ogni volta che si apre un toggle
+          const n = 1 + Math.floor(Math.random() * 3);
+          for (let i = 0; i < n; i++) aggiungiImmagineRandom();
+        });
+      });
     });
-  </script>
+    </script>
   
 </body>
 </html>
