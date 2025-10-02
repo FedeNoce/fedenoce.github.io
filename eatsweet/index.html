@@ -35,20 +35,8 @@
       height: auto;              /* mantiene proporzioni */
     }
 
-    /* main { padding: 1rem; } */
-    main {
-      position: relative;
-    }
+    main { padding: 1rem; } 
     
-    main .sfondo {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0; /* dietro al contenuto */
-      pointer-events: none;
-    }
     h1 { text-align: center; margin-bottom: 1.5rem; font-size: 2rem; letter-spacing: 1px; }
 
     /* CATEGORIE */
@@ -96,8 +84,6 @@
   <main>
 
     <h1>I nostri prodotti</h1>
-    <div class="sfondo"></div>
-
 
     <!-- Babà -->
     <section class="categoria">
@@ -793,46 +779,6 @@
       });
     });
   </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const immagini = [
-        "./assets/background/bg01.png",
-        "./assets/background/bg02.png",
-        "./assets/background/bg03.png",
-        "./assets/background/bg04.png",
-        "./assets/background/bg05.png",
-        "./assets/background/bg06.png"
-      ];
-    
-      const sfondo = document.querySelector('main .sfondo');
-    
-      function aggiungiImmagineRandom() {
-        const img = document.createElement('img');
-        img.src = immagini[Math.floor(Math.random() * immagini.length)];
-    
-        img.style.position = 'absolute';
-        img.style.width = `${50 + Math.random() * 150}px`;
-        img.style.top = `${Math.random() * (sfondo.offsetHeight - 50)}px`;
-        img.style.left = `${Math.random() * (sfondo.offsetWidth - 50)}px`;
-        img.style.opacity = 0.5 + Math.random() * 0.5;
-        img.style.pointerEvents = 'none';
-    
-        sfondo.appendChild(img);
-      }
-    
-      // Immagini iniziali
-      for (let i = 0; i < 5; i++) aggiungiImmagineRandom();
-    
-      // Aggiunge nuove immagini ad ogni toggle
-      const toggles = document.querySelectorAll('.toggle');
-      toggles.forEach(toggle => {
-        toggle.addEventListener('click', () => {
-          const n = 1 + Math.floor(Math.random() * 3);
-          for (let i = 0; i < n; i++) aggiungiImmagineRandom();
-        });
-      });
-    });
-    </script>
   
 </body>
 </html>
