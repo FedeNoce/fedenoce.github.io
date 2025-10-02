@@ -795,10 +795,12 @@
       const immagineScelta = immaginiSfondo[randomIndex];
   
       // Imposta lo sfondo solo per il body (non l'header)
-      document.body.style.backgroundImage = `url(${immagineScelta})`;
-      document.body.style.backgroundSize = 'cover';
-      document.body.style.backgroundPosition = 'center';
-      document.body.style.backgroundRepeat = 'no-repeat';
+      // Imposta lo sfondo solo per il main
+    const main = document.querySelector('main');
+    main.style.backgroundImage = `url(${immagineScelta})`;
+    main.style.backgroundSize = 'cover';
+    main.style.backgroundPosition = 'center';
+    main.style.backgroundRepeat = 'no-repeat';
     });
   </script>
   
