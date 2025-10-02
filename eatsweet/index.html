@@ -787,37 +787,68 @@
     });
   </script>
   
+  <style>
+    main {
+      position: relative; /* per far stare il contenuto sopra lo sfondo */
+      z-index: 1;
+    }
+  
+    #sfondo-main {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 0;
+    }
+  
+    #sfondo-main img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+  
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const main = document.querySelector('main');
   
+      // Contenitore per lo sfondo
+      const sfondoDiv = document.createElement('div');
+      sfondoDiv.id = 'sfondo-main';
+      main.prepend(sfondoDiv);
+  
       // Lista delle immagini disponibili
       const immaginiSfondo = [
-      "./assets/background/bg01.png",
-      "./assets/background/bg02.png",
-      "./assets/background/bg03.png",
-      "./assets/background/bg04.png",
-      "./assets/background/bg05.png",
-      "./assets/background/bg06.png"
-    ];
+        './assets/immagini/bg1.jpg',
+        './assets/immagini/bg2.jpg',
+        './assets/immagini/bg3.jpg',
+        './assets/immagini/bg4.jpg'
+      ];
   
-      // Numero di immagini da mostrare inizialmente
-      let numImmagini = 5; // puoi aumentare o diminuire
+      // Funzione per aggiungere immagini fino a coprire il main
+      const aggiungiSfondo = () => {
+        sfondoDiv.innerHTML = ''; // pulisce
+        let totaleAltezza = 0;
+        const mainHeight = main.offsetHeight;
   
-      for (let i = 0; i < numImmagini; i++) {
-        const randomIndex = Math.floor(Math.random() * immaginiSfondo.length);
-        const img = document.createElement('img');
-        img.src = immaginiSfondo[randomIndex];
-        img.style.width = '100%';
-        img.style.height = 'auto';
-        img.style.display = 'block';
-        img.style.objectFit = 'contain';
-        img.style.marginBottom = '0';
-        img.style.position = 'relative';
-        main.insertBefore(img, main.firstChild); // inserisce sopra il contenuto esistente
+        while (totaleAltezza < mainHeight) {
+          const randomIndex = Math.floor(Math.random() * immaginiSfondo.length);
+          const img = document.createElement('img');
+          img.src = immaginiSfondo[randomIndex];
+          sfondoDiv.appendChild(img);
+          img.onload = () => {
+            totaleAltezza += img.height;
+          }
+        }
       }
+  
+      aggiungiSfondo();
+  
+      // Aggiorna lo sfondo se la finestra viene ridimensionata
+      window.addEventListener('resize', aggiungiSfondo);
     });
   </script>
+  
   
   
 </body>
