@@ -746,36 +746,39 @@
   </footer>
 
   <style>
+    /* Sfondo per il body (solo sotto main) */
     body {
       font-family: 'Raleway', sans-serif;
       color: #333;
-      min-height: 100vh;
-      margin: 0;
-      background-position: center;
-      background-repeat: no-repeat;
+    }
+  
+    main {
+      position: relative;
+      z-index: 0;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 10px;
+      padding: 1rem;
+      margin: 0.5rem;
+      overflow: hidden;
+    }
+  
+    /* Layer sfondo randomico */
+    .bg-layer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
       background-size: cover;
-      transition: background-image 0.5s ease-in-out;
-    }
-  
-  
-    /* CARD PRODOTTI con effetto vetro satinato */
-    article {
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 12px;
-      padding: 0.5rem;
-      text-align: center;
-      transition: transform 0.2s, box-shadow 0.2s;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-    }
-    article:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      background-position: center;
+      filter: blur(10px) brightness(0.7);
+      opacity: 0.6;
+      transition: opacity 1s ease-in-out;
     }
   </style>
   
   <script>
-    // Lista immagini di sfondo
     const images = [
       "./assets/background/bg01.png",
       "./assets/background/bg02.png",
@@ -785,10 +788,22 @@
       "./assets/background/bg06.png"
     ];
   
-    // Scegli immagine casuale
-    const randomImage = images[Math.floor(Math.random() * images.length)];
-  
     document.addEventListener("DOMContentLoaded", () => {
-      document.body.style.backgroundImage = `url(${randomImage})`;
+      // Crea più layer di sfondo
+      images.forEach(imgPath => {
+        const layer = document.createElement("div");
+        layer.classList.add("bg-layer");
+        layer.style.backgroundImage = `url(${imgPath})`;
+  
+        // Mostra randomicamente solo alcuni layer
+        if (Math.random() > 0.5) {
+          layer.style.opacity = 0.6;
+        } else {
+          layer.style.opacity = 0;
+        }
+  
+        document.body.appendChild(layer);
+      });
     });
   </script>
+  
