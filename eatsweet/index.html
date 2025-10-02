@@ -36,6 +36,13 @@
     }
 
     main { padding: 1rem; } 
+    main::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255, 255, 255, 0.6); /* overlay bianco semitrasparente */
+      z-index: -1;
+    }
     
     h1 { text-align: center; margin-bottom: 1.5rem; font-size: 2rem; letter-spacing: 1px; }
 
@@ -779,6 +786,37 @@
       });
     });
   </script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const main = document.querySelector('main');
+  
+      // Lista delle immagini disponibili
+      const immaginiSfondo = [
+        './assets/immagini/bg1.jpg',
+        './assets/immagini/bg2.jpg',
+        './assets/immagini/bg3.jpg',
+        './assets/immagini/bg4.jpg'
+      ];
+  
+      // Numero di immagini da mostrare inizialmente
+      let numImmagini = 5; // puoi aumentare o diminuire
+  
+      for (let i = 0; i < numImmagini; i++) {
+        const randomIndex = Math.floor(Math.random() * immaginiSfondo.length);
+        const img = document.createElement('img');
+        img.src = immaginiSfondo[randomIndex];
+        img.style.width = '100%';
+        img.style.height = 'auto';
+        img.style.display = 'block';
+        img.style.objectFit = 'contain';
+        img.style.marginBottom = '0';
+        img.style.position = 'relative';
+        main.insertBefore(img, main.firstChild); // inserisce sopra il contenuto esistente
+      }
+    });
+  </script>
+  
   
 </body>
 </html>
