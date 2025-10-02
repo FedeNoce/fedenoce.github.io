@@ -59,11 +59,11 @@
         height: 150px;
         background-size: cover;
         background-position: center;
-        filter: blur(3px) brightness(0.8);
-        opacity: 0.5;
+        filter: blur(1px) brightness(0.9); /* meno sfocato */
+        opacity: 0.6; /* leggermente più visibile */
         border-radius: 12px;
-        z-index: -10; /* below content */
-        pointer-events: none; /* allows clicks on toggles/buttons */
+        z-index: -10;
+        pointer-events: none;
       }
   </style>
 </head>
@@ -749,68 +749,53 @@
     ];
 
     document.addEventListener("DOMContentLoaded", () => {
-      const main = document.querySelector("main");
-
-      // Genera sfondi randomici
-      for (let i = 0; i < 12; i++) {
-        const imgPath = images[Math.floor(Math.random() * images.length)];
-        const layer = document.createElement("div");
-        layer.classList.add("bg-layer");
-        layer.style.backgroundImage = `url(${imgPath})`;
-
-        const maxX = main.clientWidth - 150;
-        const maxY = main.clientHeight - 150;
-        layer.style.left = `${Math.random() * maxX}px`;
-        layer.style.top = `${Math.random() * maxY}px`;
-
-        main.appendChild(layer);
-      }
-
-      // Toggle categorie
-      document.querySelectorAll(".toggle").forEach(toggle => {
-        toggle.addEventListener("click", () => {
-          toggle.classList.toggle("active");
+        const main = document.querySelector("main");
+      
+        // Genera sfondi randomici
+        for (let i = 0; i < 12; i++) {
+          const imgPath = images[Math.floor(Math.random() * images.length)];
+          const layer = document.createElement("div");
+          layer.classList.add("bg-layer");
+          layer.style.backgroundImage = `url(${imgPath})`;
+      
+          const maxX = main.clientWidth - 150;
+          const maxY = main.clientHeight - 150;
+          layer.style.left = `${Math.random() * maxX}px`;
+          layer.style.top = `${Math.random() * maxY}px`;
+      
+          main.appendChild(layer);
+        }
+      
+        // Toggle categorie
+        document.querySelectorAll(".toggle").forEach(toggle => {
           const prodotti = toggle.nextElementSibling;
-          if (prodotti.style.display === "grid") {
-            prodotti.style.display = "none";
-          } else {
-            prodotti.style.display = "grid";
-          }
+      
+          // Apri tutto all’inizio
+          prodotti.style.display = "grid";
+          toggle.classList.add("active");
+      
+          // Bottone chiudi
+          const closeBtn = document.createElement("button");
+          closeBtn.textContent = "Chiudi";
+          closeBtn.classList.add("close-toggle");
+          prodotti.appendChild(closeBtn);
+      
+          // Funzione toggle
+          const toggleProdotti = (forceClose = false) => {
+            const isOpen = prodotti.style.display === "grid";
+            const shouldClose = forceClose || isOpen;
+            prodotti.style.display = shouldClose ? "none" : "grid";
+            toggle.classList.toggle("active", !shouldClose);
+          };
+      
+          toggle.addEventListener("click", () => toggleProdotti());
+          closeBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            toggleProdotti(true);
+          });
         });
       });
-    });
-  </script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const toggles = document.querySelectorAll(".toggle");
-  
-      toggles.forEach(toggle => {
-        const prodotti = toggle.nextElementSibling;
-  
-        // Crea e aggiungi il bottone di chiusura alla fine della sezione prodotti
-        const closeBtn = document.createElement("button");
-        closeBtn.textContent = "Chiudi";
-        closeBtn.classList.add("close-toggle");
-        prodotti.appendChild(closeBtn);
-  
-        // Funzione per aprire/chiudere
-        const toggleProdotti = (forceClose = false) => {
-          const isOpen = prodotti.style.display === "grid";
-          const shouldClose = forceClose || isOpen;
-          prodotti.style.display = shouldClose ? "none" : "grid";
-          toggle.classList.toggle("active", !shouldClose);
-        };
-  
-        // Clic sul titolo per aprire/chiudere
-        toggle.addEventListener("click", () => toggleProdotti());
-  
-        // Clic sul bottone di chiusura
-        closeBtn.addEventListener("click", (e) => {
-          e.stopPropagation(); // evita che richiami anche il toggle del titolo
-          toggleProdotti(true);
-        });
-      });
-    });
+      
   </script>
   
 </body>
