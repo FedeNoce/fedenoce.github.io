@@ -67,51 +67,6 @@
         transition: transform 0.3s;
       }
   </style>
-  <script>
-    const images = [
-      "./assets/background/bg01.png",
-      "./assets/background/bg02.png",
-      "./assets/background/bg03.png",
-      "./assets/background/bg04.png",
-      "./assets/background/bg05.png",
-      "./assets/background/bg06.png"
-    ];
-  
-    document.addEventListener("DOMContentLoaded", () => {
-      const main = document.querySelector("main");
-  
-      // Genera 12 immagini casuali
-      const usedPositions = [];
-      for (let i = 0; i < 12; i++) {
-        const imgPath = images[Math.floor(Math.random() * images.length)];
-        const layer = document.createElement("div");
-        layer.classList.add("bg-layer");
-        layer.style.backgroundImage = `url(${imgPath})`;
-  
-        // Posizione casuale evitando sovrapposizioni e vicinanza eccessiva
-        let x, y, safe = false;
-        while (!safe) {
-          x = Math.random() * (main.clientWidth - 150);
-          y = Math.random() * (main.clientHeight - 150);
-          safe = true;
-          for (const pos of usedPositions) {
-            const dx = pos.x - x;
-            const dy = pos.y - y;
-            if (Math.sqrt(dx*dx + dy*dy) < 180) { // distanza minima 180px
-              safe = false;
-              break;
-            }
-          }
-        }
-        usedPositions.push({x, y});
-  
-        layer.style.left = `${x}px`;
-        layer.style.top = `${y}px`;
-  
-        main.appendChild(layer);
-      }
-    });
-  </script>
 </head>
 <body>
   <header>
@@ -785,3 +740,58 @@
   </main>
 
 
+  <script>
+    const images = [
+      "./assets/background/bg01.png",
+      "./assets/background/bg02.png",
+      "./assets/background/bg03.png",
+      "./assets/background/bg04.png",
+      "./assets/background/bg05.png",
+      "./assets/background/bg06.png"
+    ];
+    
+    document.addEventListener("DOMContentLoaded", () => {
+      const main = document.querySelector("main");
+    
+      // Wait for main to have clientWidth and clientHeight > 0
+      const addLayers = () => {
+        if (main.clientWidth === 0 || main.clientHeight === 0) {
+          setTimeout(addLayers, 50); // wait a bit and retry
+          return;
+        }
+    
+        const usedPositions = [];
+        for (let i = 0; i < 12; i++) {
+          const imgPath = images[Math.floor(Math.random() * images.length)];
+          const layer = document.createElement("div");
+          layer.classList.add("bg-layer");
+          layer.style.backgroundImage = `url(${imgPath})`;
+    
+          // Try up to 20 times to find a safe position
+          let x, y, attempts = 0, safe = false;
+          while (!safe && attempts < 20) {
+            x = Math.random() * (main.clientWidth - 150);
+            y = Math.random() * (main.clientHeight - 150);
+            safe = true;
+            for (const pos of usedPositions) {
+              const dx = pos.x - x;
+              const dy = pos.y - y;
+              if (Math.sqrt(dx*dx + dy*dy) < 180) {
+                safe = false;
+                break;
+              }
+            }
+            attempts++;
+          }
+    
+          usedPositions.push({x, y});
+          layer.style.left = `${x}px`;
+          layer.style.top = `${y}px`;
+    
+          main.appendChild(layer);
+        }
+      };
+    
+      addLayers();
+    });
+    </script>
