@@ -59,12 +59,12 @@
         height: 150px;
         background-size: cover;
         background-position: center;
-        filter: blur(3px) brightness(0.8); /* meno sfocatura */
+        filter: blur(3px) brightness(0.8);
         opacity: 0.5;
         border-radius: 12px;
-        z-index: -1;
-        pointer-events: none;
-        transition: all 0.5s;
+        z-index: -10; /* sotto tutti i contenuti */
+        pointer-events: none; /* permette di cliccare sopra */
+        transition: transform 0.3s;
       }
   </style>
   <script>
@@ -79,26 +79,32 @@
   
     document.addEventListener("DOMContentLoaded", () => {
       const main = document.querySelector("main");
-      const nLayers = 10;
   
-      const padding = 50; // distanza minima dai bordi
+      // Genera 12 immagini casuali
       const usedPositions = [];
-  
-      for (let i = 0; i < nLayers; i++) {
+      for (let i = 0; i < 12; i++) {
         const imgPath = images[Math.floor(Math.random() * images.length)];
         const layer = document.createElement("div");
         layer.classList.add("bg-layer");
         layer.style.backgroundImage = `url(${imgPath})`;
   
-        let x, y;
-        let tries = 0;
-        do {
-          x = padding + Math.random() * (main.clientWidth - 150 - 2 * padding);
-          y = padding + Math.random() * (main.clientHeight - 150 - 2 * padding);
-          tries++;
-        } while (usedPositions.some(pos => Math.abs(pos.x - x) < 180 && Math.abs(pos.y - y) < 180) && tries < 100);
+        // Posizione casuale evitando sovrapposizioni e vicinanza eccessiva
+        let x, y, safe = false;
+        while (!safe) {
+          x = Math.random() * (main.clientWidth - 150);
+          y = Math.random() * (main.clientHeight - 150);
+          safe = true;
+          for (const pos of usedPositions) {
+            const dx = pos.x - x;
+            const dy = pos.y - y;
+            if (Math.sqrt(dx*dx + dy*dy) < 180) { // distanza minima 180px
+              safe = false;
+              break;
+            }
+          }
+        }
+        usedPositions.push({x, y});
   
-        usedPositions.push({ x, y });
         layer.style.left = `${x}px`;
         layer.style.top = `${y}px`;
   
