@@ -19,41 +19,40 @@
 
     /* HEADER */
 
-    /* HEADER */
-header {
-  display: flex;
-  flex-direction: column;      /* stack logos and social icons vertically */
-  justify-content: center;     /* center vertically */
-  align-items: center;         /* center horizontally */
-  gap: 8px;                    /* space between logos and social icons */
-  padding: 0.8rem;
-  background: #2384da;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-}
-
-header .logo-container {
-  display: flex;
-  justify-content: center;     /* center logos horizontally */
-  align-items: center;
-  gap: 6px;                    /* space between the two logos */
-}
-
-header .logo {
-  max-width: 200px;            /* dimensione massima per desktop */
-  width: 40vw;                 /* occupano circa il 40% dello schermo */
-  height: auto;                /* mantiene proporzioni */
-}
-
-header .social-links {
-  display: flex;
-  justify-content: center;     /* center icons horizontally */
-  gap: 10px;                   /* space between icons */
-}
-
-header .social-icon {
-  width: 32px;                 /* adjust as needed */
-  height: 32px;
-}
+    header {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;              /* prima 8px */
+      padding: 0.4rem 0.6rem; /* prima 0.8rem */
+      background: #2384da;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+    
+    header .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;              /* prima 6px */
+    }
+    
+    header .logo {
+      max-width: 160px;      /* prima 200px */
+      width: 35vw;           /* prima 40vw */
+      height: auto;
+    }
+    
+    header .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 8px;              /* prima 10px */
+    }
+    
+    header .social-icon {
+      width: 28px;           /* prima 32px */
+      height: 28px;
+    }
 
     .logo {
       max-width: 200px;          /* dimensione massima per desktop */
