@@ -19,39 +19,40 @@
 
     /* HEADER */
 
+    /* HEADER */
     header {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 4px;              /* prima 8px */
-      padding: 0.4rem 0.6rem; /* prima 0.8rem */
+      flex-direction: column;      /* stack logos and social icons vertically */
+      justify-content: center;     /* center vertically */
+      align-items: center;         /* center horizontally */
+      gap: 8px;                    /* space between logos and social icons */
+      padding: 0.8rem;
       background: #2384da;
       box-shadow: 0 3px 6px rgba(0,0,0,0.1);
     }
-    
+
     header .logo-container {
       display: flex;
-      justify-content: center;
+      justify-content: center;     /* center logos horizontally */
       align-items: center;
-      gap: 4px;              /* prima 6px */
+      gap: 6px;                    /* space between the two logos */
     }
-    
+
     header .logo {
-      max-width: 160px;      /* prima 200px */
-      width: 35vw;           /* prima 40vw */
-      height: auto;
+      max-width: 200px;            /* dimensione massima per desktop */
+      width: 40vw;                 /* occupano circa il 40% dello schermo */
+      height: auto;                /* mantiene proporzioni */
     }
-    
+
     header .social-links {
       display: flex;
-      justify-content: center;
-      gap: 8px;              /* prima 10px */
+      justify-content: center;     /* center icons horizontally */
+      gap: 10px;                   /* space between icons */
     }
-    
+
     header .social-icon {
-      width: 28px;           /* prima 32px */
-      height: 28px;
+      width: 32px;                 /* adjust as needed */
+      height: 32px;
     }
 
     .logo {
@@ -144,7 +145,7 @@
         </article>
         <article>
           <img src="./assets/immagini/baba_mignon.png" alt="Babà mignon">
-          <h3>Babà mignon</h3>
+          <h3>Babà Mignon Assortiti</h3>
           <p class="prezzo">15pz 15€</p>
         </article>
         <article>
@@ -834,8 +835,14 @@
       <div class="prodotti">
 
         <article>
+          <img src="./assets/immagini/coda.png" alt="Trancio Limone">
+          <h3>Code d'Aragosta alla Nutella</h3>
+          <p class="prezzo">15pz 13€</p>
+          <p class="prezzo">30pz 24€</p>
+        </article>
+        <article>
           <img src="./assets/immagini/mignon_01.png" alt="Trancio Limone">
-          <h3>Code d'Aragosta</h3>
+          <h3>Code d'Aragosta al Cioccolato Bianco</h3>
           <p class="prezzo">15pz 13€</p>
           <p class="prezzo">30pz 24€</p>
         </article>
