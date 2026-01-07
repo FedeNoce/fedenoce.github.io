@@ -3,8 +3,8 @@ title: "Beyond Fixed Topologies: Unregistered Training and Comprehensive Evaluat
 collection: publications
 permalink: /publication/beyond-3
 excerpt: 'We explore two training settings: a supervised one, in which training sequences share a fixed topology within a sequence but any mesh can be animated at test time, and an unsupervised one, which allows effective training with varying mesh structures. Additionally, we highlight the limitations of current evaluation metrics and propose new metrics for better lip-syncing evaluation between speech and facial movements.'
-date: 2024-03-19
-venue: 'Arxiv'
+date: 2025-12-24
+venue: 'international Journal of Computer Vision (IJCV)'
 paperurl: 'https://arxiv.org/pdf/2410.11041'
 
 ---

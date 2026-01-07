@@ -20,11 +20,11 @@ _If you wish to learn more about my research or explore potential collaborations
 Latest News
 ======
 
+- Our paper [Beyond Fixed Topologies: Unregistered Training and Comprehensive Evaluation Metrics for 3D Talking Heads](https://arxiv.org/abs/2410.11041) has been accepted for publication at [IJCV](https://link.springer.com/journal/11263).
+
 - Our paper [3D Face Reconstruction Error Decomposed: A Modular Benchmark for Fair and Fast Method Evaluation](https://arxiv.org/pdf/2505.18025) has been accepted at [FG 2025](https://fg2025.ieee-biometrics.org/).
 
 - Our paper [EmoVOCA: Speech-Driven Emotional 3D Talking Heads](https://fedenoce.github.io/emovoca/) has been accepted at [WACV 2025](https://wacv2025.thecvf.com/).
-
-- Our paper [Beyond Fixed Topologies: Unregistered Training and Comprehensive Evaluation Metrics for 3D Talking Heads](https://arxiv.org/abs/2410.11041) is available on ArXiv.
 
 - I presented our Demo [EmoVOCA: Speech-Driven Emotional 3D Talking Heads](https://arxiv.org/abs/2403.12886) at [ECCV 2024](https://eccv2024.ecva.net/).
 
