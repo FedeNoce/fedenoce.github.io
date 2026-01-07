@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-[Download PDF version of my CV](/files/Federico_Nocentini_CV_New.pdf)
+[Download PDF version of my CV](/files/Federico_Nocentini_CV_new.pdf)
 
 Experience
 ======
