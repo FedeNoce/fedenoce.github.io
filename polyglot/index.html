@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Polyglot: Multilingual Style Preserving Speech-Driven Facial Animation">
+  <meta name="keywords" content="Speech-Driven Facial Animation, Multilingual, Style Preserving, Diffusion Model, 3DMM, Talking Heads">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Polyglot</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/icon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <!-- Optional conference logo -->
+          <!-- <img src="./static/images/fg2026_logo.png" alt="FG 2026" style="width: 400px; height: auto;"> -->
+
+          <h1 class="title is-1 publication-title">Polyglot: Multilingual Style Preserving Speech-Driven Facial Animation</h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://fedenoce.github.io/">Federico Nocentini</a><sup>1,*</sup>,
+            </span>
+            <span class="author-block">Kwanggyoon Seo<sup>2</sup>,</span>
+            <span class="author-block">Qingju Liu<sup>2</sup>,</span>
+            <span class="author-block">Claudio Ferrari<sup>1</sup>,</span>
+            <span class="author-block">Stefano Berretti<sup>1</sup>,</span>
+            <span class="author-block">David Ferman<sup>2</sup>,</span>
+            <span class="author-block">Hyeongwoo Kim<sup>3</sup>,</span>
+            <span class="author-block">Pablo Garrido<sup>2</sup>,</span>
+            <span class="author-block">Akin Caliskan<sup>2</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Florence,</span>
+            <span class="author-block"><sup>2</sup>Flawless AI,</span>
+            <span class="author-block"><sup>3</sup>Imperial College London</span>
+          </div>
+
+          <div class="is-size-6 publication-authors" style="margin-top: 0.5rem;">
+            <span class="author-block"><sup>*</sup>Work done during an internship at Flawless AI</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Replace # with your real links -->
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-database"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-play-circle"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <div class="content has-text-justified">
+        <!-- Replace with your teaser image -->
+        <img src="./static/images/teaser_new_7.png" alt="Polyglot teaser">
+        <p>
+          <br>
+          We present <strong>Polyglot</strong>, a unified diffusion-based framework for <strong>multilingual speech-driven facial animation</strong> that preserves both <strong>language-specific characteristics</strong> and <strong>personal speaking style</strong>. By jointly conditioning on transcript-derived language embeddings and speaker-style embeddings extracted from reference facial motion, Polyglot generates expressive, temporally coherent facial animation across multiple languages and speakers.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Speech-Driven Facial Animation (SDFA) has garnered significant attention due to its applications in movies, video games, virtual reality, and digital humans. However, most existing methods are trained on single-language data, limiting their ability to generalize to multilingual real-world scenarios. Human speech is deeply shaped by language, affecting not only phonetics but also rhythm, intonation, and facial articulation. In addition, people speaking the same language can exhibit markedly different personal speaking styles.
+          </p>
+          <p>
+            In this work, we introduce <strong>Polyglot</strong>, a single unified diffusion-based architecture for <strong>personalized multilingual SDFA</strong>. Our method uses transcript embeddings to encode language-aware information and speaker-style embeddings, extracted from reference facial motion, to capture person-specific habits. Polyglot does not rely on predefined language labels or speaker-specific IDs, enabling stronger generalization across languages and speakers. By jointly conditioning on language and style, Polyglot generates expressive facial animations that better reflect both the linguistic structure of the speech and the identity of the speaker.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 centered-title">Method Overview</h2>
+        <div class="content has-text-justified">
+          <!-- Replace with your architecture figure -->
+          <img src="./static/images/arch_new.png" alt="Polyglot architecture">
+          <p>
+            <strong>Polyglot</strong> combines four key components: a multilingual speech encoder, an automatic speech recognition (ASR) module, a text encoder, and a style encoder. 
+            Given an input audio sequence, mHuBERT extracts temporal speech features, Whisper produces the corresponding transcript, and a text encoder (CLIP) generates language-aware embeddings. 
+            In parallel, a style embedding is computed from a reference motion sequence using a dedicated style encoder, capturing speaker-specific dynamics.
+          </p>
+          
+          <p>
+            These signals are jointly fused within a Transformer-based diffusion decoder, which is conditioned on identity, language, style, and the diffusion timestep. 
+            The decoder progressively denoises a noisy motion sequence to produce the final facial animation, enabling temporally coherent and expressive results.
+          </p>
+          
+          <p>
+            The style encoder is trained separately using an autoencoding objective, where a decoder reconstructs motion sequences from the extracted style embedding. 
+            Once trained, the style encoder is frozen and used during Polyglot training to ensure consistent preservation of personal speaking style.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 centered-title">Intro Video</h2>
+    <div class="hero-body">
+      <video id="teaser" controls playsinline height="100%">
+        <source src="./static/videos/0416.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">PolySet Dataset</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce <strong>PolySet</strong>, a multilingual dataset derived from the MultiTalk corpus. PolySet contains paired audio and 3DMM expression parameter sequences spanning <strong>20 languages</strong>. We refine the source data by filtering noisy samples based on perceptual audio quality and reconstruction quality, resulting in a balanced, high-quality benchmark for multilingual speech-driven facial animation.
+          </p>
+          <p>
+            After filtering, PolySet contains <strong>10,000 sentences</strong> sampled at 25 fps, with each language contributing 450 training samples and 50 validation and test samples, for a total of roughly <strong>16 hours</strong> of clean data.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 centered-title">Qualitative Examples</h2>
+
+    <!-- Replace video paths with your own examples 
+    <div class="hero-body video-row">
+      <video id="teaser1" class="video-item" controls playsinline>
+        <source src="./static/videos/example_01.mp4" type="video/mp4">
+      </video>
+      <video id="teaser2" class="video-item" controls playsinline>
+        <source src="./static/videos/example_02.mp4" type="video/mp4">
+      </video>
+      <video id="teaser3" class="video-item" controls playsinline>
+        <source src="./static/videos/example_03.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="hero-body video-row">
+      <video id="teaser4" class="video-item" controls playsinline>
+        <source src="./static/videos/example_04.mp4" type="video/mp4">
+      </video>
+      <video id="teaser5" class="video-item" controls playsinline>
+        <source src="./static/videos/example_05.mp4" type="video/mp4">
+      </video>
+      <video id="teaser6" class="video-item" controls playsinline>
+        <source src="./static/videos/example_06.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  -->
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Key Contributions</h2>
+        <div class="content has-text-justified">
+          <ul>
+            <li>We introduce <strong>Polyglot</strong>, a diffusion-based framework for multilingual speech-driven facial animation that jointly models language and personal style.</li>
+            <li>We condition generation on <strong>transcript-based text embeddings</strong> instead of fixed language labels, enabling richer language-aware animation.</li>
+            <li>We use a <strong>speaker-style encoder</strong> trained in a self-supervised way to capture and preserve person-specific speaking habits.</li>
+            <li>We introduce <strong>PolySet</strong>, a multilingual benchmark with paired audio and 3DMM expression sequences over 20 languages.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+<pre><code>@inproceedings{nocentini2026polyglot,
+  title     = {Polyglot: Multilingual Style Preserving Speech-Driven Facial Animation},
+  author    = {Nocentini, Federico and Seo, Kwanggyoon and Liu, Qingju and Ferrari, Claudio and Berretti, Stefano and Ferman, David and Kim, Hyeongwoo and Garrido, Pablo and Caliskan, Akin},
+  booktitle = {Proceedings of the IEEE International Conference on Automatic Face and Gesture Recognition (FG)},
+  year      = {2026}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="#">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="#" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p style="text-align:center">
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p style="text-align:center">
+            Website source code based on the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> project page.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
