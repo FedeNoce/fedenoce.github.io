@@ -9,10 +9,15 @@ redirect_from:
 
 {% include base_path %}
 
-[Download PDF version of my CV](/files/Federico_Nocentini_CV_new.pdf)
+[Download PDF version of my CV](/files/Federico_Nocentini_CV.pdf)
 
 Experience
 ======
+* **Trinity College Dublin, Graphics and Vision Group**
+  * Postdoctoral Research Fellow
+  * Dublin, Ireland
+  * June 2026 - Present
+
 * **Flawless AI**
   * Research Scientist Intern
   * Los Angeles, California
@@ -25,7 +30,9 @@ Education
 * **PhD in 3D Computer Vision and Artificial Intelligence**
   * Università degli Studi di Firenze - Media Integration and Communication Center
   * Florence, Italy
-  * November 2022 - Present
+  * November 2022 - April 2026
+  * Thesis: 3D Talking Heads: Advancing Realism and Generalization
+  * Advisors: Prof. Stefano Berretti, Prof. Claudio Ferrari
   * Topics of research: Deep Learning - 3D Computer Vision - 3D Talking Heads Generation
 
 * **M.Sc in Computer Science and Engineering**

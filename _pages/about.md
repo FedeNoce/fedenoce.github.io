@@ -7,7 +7,9 @@ redirect_from:
   - /about.html
 ---
 
-I am Federico Nocentini. I am a 3rd year PhD student at the [University of Florence](https://www.unifi.it/changelang-eng.html) at the [Media Integration and Communication Center (MICC)](https://www.micc.unifi.it/) under the supervision of [Prof. Stefano Berretti](https://www.micc.unifi.it/berretti/) and [Prof. Claudio Ferrari](https://clferrari.github.io/).
+I am Federico Nocentini, I am now a postdoctoral researcher in the [Graphics and Vision Group](https://gv.gg) at [Trinity College Dublin](https://www.tcd.ie/), under the supervision of [Prof. Binh-Son Hua](https://sonhua.github.io/).
+
+I recently obtained my PhD from the [University of Florence](https://www.unifi.it/changelang-eng.html) at the [Media Integration and Communication Center (MICC)](https://www.micc.unifi.it/), under the supervision of [Prof. Stefano Berretti](https://www.micc.unifi.it/berretti/) and [Prof. Claudio Ferrari](https://clferrari.github.io/).
 
 I was a research scientist intern at [Flawless AI](https://www.flawlessai.com/), where I focused on multilingual speech-driven facial animation under the supervision of [Akin Caliskan](https://akincaliskan3d.github.io/).
 
@@ -19,6 +21,12 @@ _If you wish to learn more about my research or explore potential collaborations
 
 Latest News
 ======
+
+- I have joined the [Graphics and Vision Group](https://gv.gg) at Trinity College Dublin, as a Postdoctoral Research Fellow, under the supervision of [Prof. Binh-Son Hua](https://sonhua.github.io/).
+
+- I successfully defended my PhD thesis, [“3D Talking Heads: Advancing Realism and Generalization”](https://flore.unifi.it/handle/2158/1464853), in April 2026.
+
+- Our paper [Polyglot: Multilingual Style Preserving Speech-Driven Facial Animation](https://fedenoce.github.io/polyglot/) has been accepted at [FG 2026](https://fg2026.ieee-biometrics.org/) in Kyoto.
 
 - Our paper [Beyond Fixed Topologies: Unregistered Training and Comprehensive Evaluation Metrics for 3D Talking Heads](https://arxiv.org/abs/2410.11041) has been accepted for publication at [IJCV](https://link.springer.com/journal/11263).
 
@@ -33,4 +41,3 @@ Latest News
 - Our demo [S2L+S2D: Identity-Preserving Speech-Driven 3D Talking Heads](https://github.com/FedeNoce/s2l-s2d) has received the Best Demo Award at [IJCB 2023](https://ijcb2023.ieee-biometrics.org/).
 
 - Our paper [Learning Landmarks Motion from Speech for Speaker-Agnostic 3D Talking Heads Generation](https://github.com/FedeNoce/s2l-s2d) has been accepted at [ICIAP 2023](https://sites.google.com/view/iciap-2023?pli=1).
-
