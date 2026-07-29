@@ -26,7 +26,7 @@ Latest News
 
 - I successfully defended my PhD thesis, [3D Talking Heads: Advancing Realism and Generalization](https://flore.unifi.it/handle/2158/1464853), in April 2026.
 
-- Our paper [Polyglot: Multilingual Style Preserving Speech-Driven Facial Animation](https://fedenoce.github.io/polyglot/) has been accepted at [FG 2026](https://fg2026.ieee-biometrics.org/) in Kyoto.
+- Our paper [Polyglot: Multilingual Style Preserving Speech-Driven Facial Animation](https://arxiv.org/pdf/2604.16108) has been accepted at [FG 2026](https://fg2026.ieee-biometrics.org/) in Kyoto.
 
 - Our paper [Beyond Fixed Topologies: Unregistered Training and Comprehensive Evaluation Metrics for 3D Talking Heads](https://arxiv.org/abs/2410.11041) has been accepted for publication at [IJCV](https://link.springer.com/journal/11263).
 
