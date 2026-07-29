@@ -51,8 +51,11 @@ function updateNav() {
   // Keep counter updated
   $btn.attr("count", breaks.length);
 
-  // Recur if the visible list is still overflowing the nav
-  if($vlinks.width() > availableSpace) {
+  // Recur if the visible list is still overflowing the nav and there are
+  // still items left that can be moved to the hidden list (guards against
+  // infinite recursion when the nav can't shrink any further, e.g. the
+  // site title alone is wider than the available space)
+  if($vlinks.width() > availableSpace && $vlinks.children('*:not(.masthead__menu-item--lg)').length > 0) {
     updateNav();
   }
 
