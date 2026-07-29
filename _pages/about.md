@@ -22,7 +22,7 @@ _If you wish to learn more about my research or explore potential collaborations
 Latest News
 ======
 
-- I have joined the [Graphics and Vision Group](https://gv.gg) at Trinity College Dublin, as a Postdoctoral Research Fellow, under the supervision of [Prof. Binh-Son Hua](https://sonhua.github.io/).
+- I have joined the [Graphics and Vision Group](https://gv2.scss.tcd.ie/) at Trinity College Dublin, as a Postdoctoral Research Fellow, under the supervision of [Prof. Binh-Son Hua](https://sonhua.github.io/).
 
 - I successfully defended my PhD thesis, [3D Talking Heads: Advancing Realism and Generalization](https://flore.unifi.it/handle/2158/1464853), in April 2026.
 
