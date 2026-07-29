@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/6-polyglot
 excerpt: 'We introduce Polyglot, a single unified diffusion-based architecture for personalized multilingual speech-driven facial animation, using transcript embeddings to encode language-aware information and speaker-style embeddings to capture person-specific habits.'
 date: 2026-05-29
-venue: 'IEEE conference series on Automatic Face and Gesture Recognition (FG)(Oral)'
+venue: 'IEEE International Conference on Automatic Face and Gesture Recognition (FG)(Oral)'
 paperurl: 'https://fedenoce.github.io/polyglot/'
 
 ---

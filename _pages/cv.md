@@ -28,7 +28,7 @@ Experience
 Education
 ======
 * **PhD in 3D Computer Vision and Artificial Intelligence**
-  * Università degli Studi di Firenze - Media Integration and Communication Center
+  * University of Florence - Media Integration and Communication Center
   * Florence, Italy
   * November 2022 - April 2026
   * Thesis: 3D Talking Heads: Advancing Realism and Generalization
@@ -36,14 +36,14 @@ Education
   * Topics of research: Deep Learning - 3D Computer Vision - 3D Talking Heads Generation
 
 * **M.Sc in Computer Science and Engineering**
-  * Università degli Studi di Firenze
+  * University of Florence
   * Florence, Italy
   * February 2020 - October 2022
   * Grade: 110/110
   * Thesis: Generating Emotional 3D Talking Heads from Audio Spectrograms
 
 * **B.Sc in Computer Science and Engineering**
-  * Università degli Studi di Firenze
+  * University of Florence
   * Florence, Italy
   * September 2016 - February 2020
   * Grade: 104/110
