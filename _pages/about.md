@@ -22,28 +22,28 @@ _If you wish to learn more about my research or explore potential collaborations
 Publications
 ======
 
-- **[Polyglot: Multilingual Style Preserving Speech-Driven Facial Animation](https://arxiv.org/abs/2604.16108)**
-  **Federico Nocentini**, Kwanggyoon Seo, Qingju Liu, Claudio Ferrari, Stefano Berretti, David Ferman, Hyeongwoo Kim, Pablo Garrido, Akin Caliskan
+- **[Polyglot: Multilingual Style Preserving Speech-Driven Facial Animation](https://arxiv.org/abs/2604.16108)** <br> 
+  **Federico Nocentini**, Kwanggyoon Seo, Qingju Liu, Claudio Ferrari, Stefano Berretti, David Ferman, Hyeongwoo Kim, Pablo Garrido, Akin Caliskan <br> 
   *IEEE International Conference on Automatic Face and Gesture Recognition (FG 2026), Oral*
 
-- **[Beyond Fixed Topologies: Unregistered Training and Comprehensive Evaluation Metrics for 3D Talking Heads](https://arxiv.org/abs/2410.11041)**
-  **Federico Nocentini**, Thomas Besnier, Claudio Ferrari, Sylvain Arguillere, Mohamed Daoudi, Stefano Berretti
-  *International Journal of Computer Vision (IJCV)*
+- **[Beyond Fixed Topologies: Unregistered Training and Comprehensive Evaluation Metrics for 3D Talking Heads](https://arxiv.org/abs/2410.11041)** <br> 
+  **Federico Nocentini**, Thomas Besnier, Claudio Ferrari, Sylvain Arguillere, Mohamed Daoudi, Stefano Berretti <br> 
+  *International Journal of Computer Vision (IJCV 2026)*
 
-- **[3D Face Reconstruction Error Decomposed: A Modular Benchmark for Fair and Fast Method Evaluation](https://arxiv.org/abs/2505.18025)**
-  Evangelos Sariyanidi, Claudio Ferrari, **Federico Nocentini**, Stefano Berretti, Andrea Cavallaro, Birkan Tunc
+- **[3D Face Reconstruction Error Decomposed: A Modular Benchmark for Fair and Fast Method Evaluation](https://arxiv.org/abs/2505.18025)** <br> 
+  Evangelos Sariyanidi, Claudio Ferrari, **Federico Nocentini**, Stefano Berretti, Andrea Cavallaro, Birkan Tunc <br> 
   *IEEE International Conference on Automatic Face and Gesture Recognition (FG 2025), Oral*
 
-- **[EmoVOCA: Speech-Driven Emotional 3D Talking Heads](https://arxiv.org/abs/2403.12886)**
-  **Federico Nocentini**, Claudio Ferrari, Stefano Berretti
+- **[EmoVOCA: Speech-Driven Emotional 3D Talking Heads](https://arxiv.org/abs/2403.12886)** <br> 
+  **Federico Nocentini**, Claudio Ferrari, Stefano Berretti <br> 
   *IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2025)*
 
-- **[ScanTalk: 3D Talking Heads from Unregistered Scans](https://arxiv.org/abs/2403.10942)**
-  **Federico Nocentini**, Thomas Besnier, Claudio Ferrari, Sylvain Arguillere, Stefano Berretti, Mohamed Daoudi
+- **[ScanTalk: 3D Talking Heads from Unregistered Scans](https://arxiv.org/abs/2403.10942)** <br> 
+  **Federico Nocentini**, Thomas Besnier, Claudio Ferrari, Sylvain Arguillere, Stefano Berretti, Mohamed Daoudi, <br> 
   *European Conference on Computer Vision (ECCV 2024)*
 
-- **[Learning Landmarks Motion from Speech for Speaker-Agnostic 3D Talking Heads Generation](https://arxiv.org/abs/2306.01415)**
-  **Federico Nocentini**, Claudio Ferrari, Stefano Berretti
+- **[Learning Landmarks Motion from Speech for Speaker-Agnostic 3D Talking Heads Generation](https://arxiv.org/abs/2306.01415)** <br> 
+  **Federico Nocentini**, Claudio Ferrari, Stefano Berretti <br> 
   *International Conference on Image Analysis and Processing (ICIAP 2023), Oral*
 
 Latest News
