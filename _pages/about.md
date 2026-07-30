@@ -7,15 +7,15 @@ redirect_from:
   - /about.html
 ---
 
-I am Federico Nocentini, I am now a postdoctoral researcher in the [Graphics and Vision Group](https://gv.gg) at [Trinity College Dublin](https://www.tcd.ie/), under the supervision of [Prof. Binh-Son Hua](https://sonhua.github.io/).
+I am Federico Nocentini, I am now a postdoctoral researcher at [Trinity College Dublin](https://www.tcd.ie/), under the supervision of [Prof. Binh-Son Hua](https://scholar.google.com/citations?hl=en&user=sV_VjsAAAAAJ&view_op=list_works).
 
-I recently obtained my PhD from the [University of Florence](https://www.unifi.it/changelang-eng.html) at the [Media Integration and Communication Center (MICC)](https://www.micc.unifi.it/), under the supervision of [Prof. Stefano Berretti](https://www.micc.unifi.it/berretti/) and [Prof. Claudio Ferrari](https://clferrari.github.io/).
+I recently obtained my PhD from the [University of Florence](https://www.unifi.it/changelang-eng.html) at the [Media Integration and Communication Center (MICC)](https://www.micc.unifi.it/), under the supervision of [Prof. Stefano Berretti](https://scholar.google.com/citations?user=3GPTAGQAAAAJ&hl=en) and [Prof. Claudio Ferrari](https://scholar.google.com/citations?user=aael17YAAAAJ&hl=en).
 
 I was a research scientist intern at [Flawless AI](https://www.flawlessai.com/), where I focused on multilingual speech-driven facial animation under the supervision of [Akin Caliskan](https://akincaliskan3d.github.io/).
 
 My main research interest revolve around 3D Computer Vision and Deep Learning, with a particular focus on human analysis applications, 3D and 4D generative face models.
 
-Previously, I obtained my MSc in Computer Science and Engineering  at the University of Florence under the supervision of [Prof. Stefano Berretti](https://www.micc.unifi.it/berretti/) and [Prof. Claudio Ferrari](https://clferrari.github.io/) with a thesis titled “Generating Emotional 3D Talking Heads from Audio Spectrograms.”
+Previously, I obtained my MSc in Computer Science and Engineering  at the University of Florence under the supervision of [Prof. Stefano Berretti](https://scholar.google.com/citations?user=3GPTAGQAAAAJ&hl=en) and [Prof. Claudio Ferrari](https://scholar.google.com/citations?user=aael17YAAAAJ&hl=en) with a thesis titled “Generating Emotional 3D Talking Heads from Audio Spectrograms.”
 
 _If you wish to learn more about my research or explore potential collaborations, please feel free to reach out via email!_
 
