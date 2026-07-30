@@ -39,7 +39,7 @@ Publications
   *IEEE/CVF Winter Conference on Applications of Computer Vision (WACV 2025)*
 
 - **[ScanTalk: 3D Talking Heads from Unregistered Scans](https://arxiv.org/abs/2403.10942)** <br> 
-  **Federico Nocentini**, Thomas Besnier, Claudio Ferrari, Sylvain Arguillere, Stefano Berretti, Mohamed Daoudi, <br> 
+  **Federico Nocentini**, Thomas Besnier, Claudio Ferrari, Sylvain Arguillere, Stefano Berretti, Mohamed Daoudi <br> 
   *European Conference on Computer Vision (ECCV 2024)*
 
 - **[Learning Landmarks Motion from Speech for Speaker-Agnostic 3D Talking Heads Generation](https://arxiv.org/abs/2306.01415)** <br> 
