@@ -151,9 +151,11 @@ h2 { font-size: 1.3rem; margin-bottom: 4px; }
 }
 .btn-rating {
   flex: 1;
-  padding: 12px 0;
-  font-size: 1.1rem;
-  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 2px;
   color: var(--text);
   border: 2px solid #d6d2c8;
   border-radius: 8px;
@@ -162,23 +164,17 @@ h2 { font-size: 1.3rem; margin-bottom: 4px; }
   cursor: pointer;
   transition: border-color .15s, background .15s, transform .1s, box-shadow .1s;
 }
+.btn-rating .rating-num { font-size: 1.15rem; font-weight: 700; line-height: 1; }
+.btn-rating .rating-label { font-size: .7rem; font-weight: 600; color: var(--muted); text-align: center; line-height: 1.1; }
 .btn-rating:hover { border-color: var(--accent); background: #f1f6f9; transform: translateY(-1px); box-shadow: 0 3px 0 var(--accent-dark), 0 2px 4px rgba(0,0,0,.1); }
 .btn-rating:active { transform: translateY(1px); box-shadow: 0 1px 0 #d6d2c8; }
 .btn-rating.selected {
   border-color: var(--accent-dark);
   background: var(--accent);
-  color: #fff;
-  font-weight: 800;
   box-shadow: 0 2px 0 var(--accent-dark), 0 1px 3px rgba(0,0,0,.15);
 }
-.scale-reminder {
-  display: flex;
-  justify-content: space-between;
-  max-width: 420px;
-  margin: 0 auto 10px;
-  color: var(--muted);
-  font-size: .85rem;
-}
+.btn-rating.selected .rating-num { color: #fff; font-weight: 800; }
+.btn-rating.selected .rating-label { color: #eaf2f6; }
 
 .btn-primary {
   display: block;

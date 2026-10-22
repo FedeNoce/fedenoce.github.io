@@ -174,12 +174,14 @@ $("t1-next").addEventListener("click", () => {
 // ---------------------------------------------------------------------------
 // Test 2 flow
 // ---------------------------------------------------------------------------
+const RATING_LABELS = ["Very Poor", "Poor", "Fair", "Good", "Excellent"];
+
 function buildRatingButtons(container, onPick) {
   container.innerHTML = "";
   for (let i = 1; i <= 5; i++) {
     const b = document.createElement("button");
     b.className = "btn-rating";
-    b.textContent = i;
+    b.innerHTML = `<span class="rating-num">${i}</span><span class="rating-label">${RATING_LABELS[i - 1]}</span>`;
     b.addEventListener("click", () => {
       container.querySelectorAll(".btn-rating").forEach((x) => x.classList.toggle("selected", x === b));
       onPick(i);
