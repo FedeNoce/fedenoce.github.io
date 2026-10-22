@@ -186,10 +186,6 @@ function buildRatingButtons(container, onPick) {
     });
     container.appendChild(b);
   }
-  const labels = document.createElement("div");
-  labels.className = "rating-scale-labels";
-  labels.innerHTML = "<span>1 = bad</span><span>5 = excellent</span>";
-  container.appendChild(labels);
 }
 
 function renderTest2Step() {
