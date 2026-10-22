@@ -11,27 +11,28 @@ const SUBMIT_URL = "https://script.google.com/macros/s/AKfycbyB84ryECxiEJNtdRgms
 // Content manifest
 // ---------------------------------------------------------------------------
 const CLIPS = [
-  { id: "M003_angry_1_001",     emotion: "Angry" },
-  { id: "M003_happy_1_001",     emotion: "Happy" },
-  { id: "M005_sad_1_001",       emotion: "Sad" },
-  { id: "M005_surprised_1_001", emotion: "Surprised" },
-  { id: "M007_disgusted_1_001", emotion: "Disgusted" },
-  { id: "M007_contempt_1_001",  emotion: "Contempt" },
-  { id: "W029_fear_1_003",      emotion: "Fear" },
-  { id: "W029_neutral_1_002",   emotion: "Neutral" },
-  { id: "W033_happy_1_001",     emotion: "Happy" },
-  { id: "W033_angry_1_002",     emotion: "Angry" },
-  { id: "W035_surprised_1_001", emotion: "Surprised" },
-  { id: "W035_sad_1_001",       emotion: "Sad" },
+  { id: "M003_angry_3_001",     emotion: "Angry" },
+  { id: "M003_happy_3_001",     emotion: "Happy" },
+  { id: "M005_sad_3_001",       emotion: "Sad" },
+  { id: "M005_surprised_3_001", emotion: "Surprised" },
+  { id: "M007_disgusted_3_001", emotion: "Disgusted" },
+  { id: "M007_contempt_3_001",  emotion: "Contempt" },
+  { id: "W029_fear_3_001",      emotion: "Fear" },
+  { id: "W029_contempt_3_001",  emotion: "Contempt" },
+  { id: "W033_happy_3_001",     emotion: "Happy" },
+  { id: "W033_angry_3_001",     emotion: "Angry" },
+  { id: "W035_surprised_3_001", emotion: "Surprised" },
+  { id: "W035_sad_3_001",       emotion: "Sad" },
 ];
 
-const BASELINES = ["emoface", "faceformer", "scantalk", "emoposeface"];
-const N_TEST1_SHOWN = 16; // how many of the 12*4=48 pairs each participant judges
+const BASELINES = ["scantalk", "emoposeface"];
+const N_TEST1_SHOWN = 16; // how many of the 12*2=24 pairs each participant judges
 
 const TEST2_ITEMS = [
-  "arnold_photo", "arnold_ex_angry",
-  "thanos_photo", "thanos_M1_34",
-  "FLAME_sample_remeshed_ex_angry", "FLAME_sample_remeshed_M1_34",
+  "thanos_photo", "id_005_ex_angry", "thanos_fear", "Alien_angry2",
+  "id_003_photo", "id_002_surprised2", "FLAME_sample_remeshed_surprised2",
+  "FLAME_sample_remeshed_ex_angry", "arnold_angry2", "F2_photo",
+  "F2_ex_angry", "id_005_angry2",
 ];
 
 // ---------------------------------------------------------------------------
@@ -73,18 +74,14 @@ function buildTest1Plan() {
   }
   const picked = shuffle(pool).slice(0, N_TEST1_SHOWN);
   return picked.map((item) => {
-    const freetalkIsA = Math.random() < 0.5;
+    const freetalkIsLeft = Math.random() < 0.5;
     return {
       clipId: item.clip.id,
       emotion: item.clip.emotion,
       baseline: item.baseline,
-      freetalkSide: freetalkIsA ? "A" : "B",
-      videoA: freetalkIsA
-        ? `videos/test1/freetalk/${item.clip.id}.mp4`
-        : `videos/test1/${item.baseline}/${item.clip.id}.mp4`,
-      videoB: freetalkIsA
-        ? `videos/test1/${item.baseline}/${item.clip.id}.mp4`
-        : `videos/test1/freetalk/${item.clip.id}.mp4`,
+      // "A" = left half of the composited video, "B" = right half
+      freetalkSide: freetalkIsLeft ? "A" : "B",
+      video: `videos/test1/${item.baseline}/${item.clip.id}_${freetalkIsLeft ? "ftleft" : "ftright"}.mp4`,
     };
   });
 }
@@ -126,10 +123,8 @@ function renderTest1Step() {
   $("t1-emotion").textContent = item.emotion;
   $("t1-emotion2").textContent = item.emotion;
 
-  $("t1-video-a").src = item.videoA;
-  $("t1-video-b").src = item.videoB;
-  $("t1-video-a").load();
-  $("t1-video-b").load();
+  $("t1-video").src = item.video;
+  $("t1-video").load();
 
   t1Choice1 = null;
   t1Choice2 = null;
@@ -172,7 +167,7 @@ $("t1-next").addEventListener("click", () => {
   if (t1Index < session.test1Plan.length) {
     renderTest1Step();
   } else {
-    startTest2();
+    showTest2Intro();
   }
 });
 
@@ -250,6 +245,9 @@ function startTest2() {
   renderTest2Step();
 }
 
+function showTest1Intro() { show("screen-test1-intro"); }
+function showTest2Intro() { show("screen-test2-intro"); }
+
 function submitResults() {
   show("screen-submit");
   session.finishedAt = new Date().toISOString();
@@ -280,4 +278,6 @@ function submitResults() {
   setTimeout(() => show("screen-done"), 1200);
 }
 
-$("btn-start").addEventListener("click", startTest1);
+$("btn-start").addEventListener("click", showTest1Intro);
+$("btn-start-test1").addEventListener("click", startTest1);
+$("btn-start-test2").addEventListener("click", startTest2);
